@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
+<title>Perfect_360_Biology_Batch_for_NEET_UG_2027_All_14_Premium_Resources</title>
+<script>(function(){
+  try{
+    if(localStorage.getItem('bbk_dark')==='1'){
+      document.documentElement.classList.add('dark');
+    }
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+<style>
+/* ── CSS Variables ── */
+:root {
+  --bg:#f0f4f8; --card:#ffffff; --header-bg:#0f172a;
+  --text:#1e293b; --muted:#64748b; --border:#e2e8f0;
+  --accent:#2563eb; --accent2:#0ea5e9; --green:#22c55e; --red:#ef4444;
+  --plyr-color-main:#0ea5e9;
+  --shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.06);
+  --shadow-md:0 4px 16px rgba(0,0,0,.12);
+  --radius:12px; --radius-sm:8px;
+  --header-h:48px;
+}
+html.dark {
+  --bg:#0d1117; --card:#161b22; --header-bg:#010409;
+  --text:#e6edf3; --muted:#8b949e; --border:#30363d;
+  --accent:#58a6ff; --accent2:#38bdf8; --green:#4ade80; --red:#f87171;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.25);
+  --shadow-md:0 4px 16px rgba(0,0,0,.4);
+}
+
+/* ── Reset & Base ── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,sans-serif;
+  font-size:15px;line-height:1.5;
+  transition:background .25s,color .25s;
+}
+
+/* ── Header ── */
+.header{
+  background:var(--header-bg);color:#fff;
+  padding:0 12px;height:var(--header-h);
+  display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:2000;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.header-title{
+  font-size:15px;font-weight:700;flex:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  letter-spacing:-.01em;
+}
+.header-controls{display:flex;gap:5px;align-items:center;flex-shrink:0;}
+.ctrl-btn{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  color:#fff;border-radius:8px;padding:6px 9px;cursor:pointer;
+  font-size:12px;line-height:1;transition:background .2s,transform .15s;
+  white-space:nowrap;
+}
+.ctrl-btn:hover{background:rgba(255,255,255,.22);}
+.ctrl-btn:focus-visible{outline:2px solid var(--accent2);outline-offset:2px;}
+
+/* ── Progress Bar ── */
+.progress-bar-track{
+  height:3px;background:var(--border);
+  position:sticky;top:var(--header-h);z-index:1999;
+}
+.progress-bar-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,var(--accent2),var(--accent));
+  transition:width .4s ease;
+}
+
+/* ── Toast Notifications ── */
+#toast-container{
+  position:fixed;bottom:24px;right:20px;z-index:9999;
+  display:flex;flex-direction:column;gap:8px;pointer-events:none;
+}
+.toast{
+  background:#1e293b;color:#f1f5f9;border-radius:10px;
+  padding:10px 16px;font-size:13px;font-weight:500;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 6px 24px rgba(0,0,0,.35);
+  opacity:0;transform:translateY(12px) scale(.96);
+  transition:opacity .25s,transform .25s;pointer-events:auto;
+  max-width:300px;border-left:4px solid var(--accent2);
+}
+.toast.show{opacity:1;transform:translateY(0) scale(1);}
+.toast.toast-success{border-left-color:var(--green);}
+.toast.toast-error{border-left-color:var(--red);}
+.toast.toast-warn{border-left-color:#f59e0b;}
+
+/* ── Main Container ── */
+.main-container{padding:14px;max-width:900px;margin:0 auto;}
+
+/* ── Player ── */
+.player-wrapper{
+  background:#000;margin-bottom:12px;border-radius:var(--radius);
+  overflow:visible;                        /* FIX: was overflow:hidden — now menus pop out */
+  box-shadow:0 8px 32px rgba(0,0,0,.28);
+  position:sticky;top:calc(var(--header-h) + 3px);z-index:1000;
+}
+/* Inner clip so video corners stay rounded but menus escape */
+.player-wrapper > video,
+.player-wrapper > .plyr {
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+
+/* ── Plyr settings/quality menu — always render ABOVE controls ── */
+.plyr__menu {
+  z-index:10000 !important;
+  position:relative !important;
+}
+
+
+/* ── Hide mute button and volume slider ── */
+.plyr__controls .plyr__control[data-plyr="mute"],
+.plyr__volume {
+  display:none !important;
+}
+
+/* Loading spinner overlay */
+.player-loading{
+  position:absolute;inset:0;background:rgba(0,0,0,.55);
+  display:flex;align-items:center;justify-content:center;
+  z-index:10;border-radius:var(--radius);opacity:0;pointer-events:none;
+  transition:opacity .25s;
+}
+.player-loading.visible{opacity:1;pointer-events:auto;}
+.spinner{
+  width:44px;height:44px;border:4px solid rgba(255,255,255,.2);
+  border-top-color:#fff;border-radius:50%;
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+/* Error overlay */
+.player-error{
+  position:absolute;inset:0;background:rgba(0,0,0,.8);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  z-index:11;border-radius:var(--radius);gap:12px;color:#fff;padding:24px;
+  text-align:center;
+}
+.player-error.visible{display:flex;}
+.player-error p{font-size:14px;color:#fca5a5;line-height:1.5;}
+.player-error-title{font-size:16px;font-weight:700;}
+.retry-btn{
+  background:var(--accent2);border:none;color:#fff;
+  border-radius:8px;padding:8px 20px;cursor:pointer;font-size:14px;font-weight:600;
+  transition:background .2s;
+}
+.retry-btn:hover{background:var(--accent);}
+.open-link-btn{background:rgba(255,255,255,.12);margin-left:8px;text-decoration:none;}
+.open-link-btn:hover{background:rgba(255,255,255,.22);}
+
+.plyr{border-radius:var(--radius);}
+
+/* Now playing */
+.now-playing{
+  background:linear-gradient(135deg,#1e293b,#0f172a);
+  border:1px solid rgba(14,165,233,.25);
+  border-radius:var(--radius-sm);padding:9px 14px;margin-bottom:10px;
+  display:none;align-items:center;gap:9px;font-size:13px;color:#e2e8f0;
+}
+.now-playing-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--accent2);
+  flex-shrink:0;animation:blink 1.2s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.now-playing-title{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;}
+.now-playing-nav{display:flex;gap:6px;flex-shrink:0;}
+.nav-btn{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  color:#fff;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;
+  transition:background .2s;
+}
+.nav-btn:hover{background:rgba(255,255,255,.26);}
+.nav-btn:disabled{opacity:.3;cursor:not-allowed;}
+
+/* Auto-next banner */
+.autonext-banner{
+  background:linear-gradient(135deg,#1e3a5f,#0f172a);
+  border:1px solid rgba(14,165,233,.3);
+  border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:10px;
+  display:none;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:#e2e8f0;
+}
+.autonext-banner.show{display:flex;}
+.autonext-count{
+  font-size:22px;font-weight:800;color:var(--accent2);
+  min-width:28px;text-align:center;line-height:1;
+}
+.autonext-label{flex:1;min-width:120px;}
+.autonext-cancel{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  color:#94a3b8;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px;
+}
+.autonext-play{
+  background:var(--accent2);border:none;color:#fff;
+  border-radius:6px;padding:5px 12px;cursor:pointer;font-size:12px;font-weight:600;
+}
+
+/* ── Resume Banner ── */
+.resume-banner{
+  background:linear-gradient(135deg,#1e293b,#0f172a);
+  border:1px solid rgba(14,165,233,.2);
+  border-radius:var(--radius-sm);padding:11px 14px;margin-bottom:10px;
+  display:none;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:#e2e8f0;
+}
+.resume-banner span{flex:1;min-width:140px;}
+.resume-btn{
+  background:var(--accent2);border:none;color:#fff;
+  border-radius:6px;padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;
+  transition:background .2s;
+}
+.resume-btn:hover{background:var(--accent);}
+.resume-dismiss{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  color:#94a3b8;border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12px;
+}
+
+/* ── Search ── */
+.search-wrap{position:relative;margin-bottom:12px;}
+.search-wrap .fa-magnifying-glass{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:var(--muted);font-size:14px;pointer-events:none;
+}
+.search-input{
+  width:100%;padding:11px 42px 11px 40px;
+  border:1.5px solid var(--border);border-radius:var(--radius);
+  font-size:14px;background:var(--card);color:var(--text);
+  outline:none;transition:border-color .2s,box-shadow .2s;
+}
+.search-input:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(14,165,233,.12);}
+.search-clear{
+  position:absolute;right:13px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--muted);font-size:16px;
+  cursor:pointer;display:none;padding:2px 4px;border-radius:4px;
+  transition:color .2s;
+}
+.search-clear:hover{color:var(--text);}
+.search-clear.visible{display:block;}
+
+/* ── Toolbar ── */
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.badge{
+  font-size:12px;font-weight:500;border-radius:20px;padding:4px 12px;
+  border:1.5px solid var(--border);background:var(--card);color:var(--muted);
+}
+.badge-progress{border-color:var(--accent2);color:var(--accent2);}
+.badge-result{border-color:var(--accent);color:var(--accent);}
+
+/* ── Subject Accordion ── */
+.accordion-item{
+  margin-bottom:10px;border-radius:var(--radius);
+  background:var(--card);box-shadow:var(--shadow);
+  border:1px solid var(--border);overflow:hidden;
+}
+.accordion-header{
+  width:100%;background:var(--card);color:var(--text);border:none;
+  text-align:left;padding:15px 18px;cursor:pointer;
+  display:flex;align-items:center;gap:10px;
+  transition:background .2s;
+}
+.accordion-header:hover{background:var(--bg);}
+.accordion-header.active{background:var(--bg);}
+.accordion-header:focus-visible{outline:2px solid var(--accent2);outline-offset:-2px;}
+.sub-name{font-size:15px;font-weight:700;flex:1;letter-spacing:-.01em;}
+.sub-count{
+  background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:700;
+  border-radius:20px;padding:3px 9px;flex-shrink:0;
+}
+html.dark .sub-count{background:#1e3a5f;color:#60a5fa;}
+.sub-progress{font-size:12px;color:var(--muted);flex-shrink:0;}
+.acc-arrow{
+  color:var(--muted);font-size:20px;font-weight:300;
+  transition:transform .35s cubic-bezier(.4,0,.2,1);flex-shrink:0;
+  margin-left:4px;user-select:none;
+}
+.accordion-header.active .acc-arrow{transform:rotate(45deg);}
+.accordion-content{
+  overflow:hidden;max-height:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1);
+  padding:0 14px;
+}
+.accordion-content.open{padding-bottom:8px;}
+
+/* ── Topic Accordion ── */
+.topic-accordion{margin:8px 0;border-radius:var(--radius-sm);overflow:hidden;}
+.topic-header{
+  width:100%;background:var(--bg);color:var(--text);border:none;
+  text-align:left;padding:10px 13px;cursor:pointer;border-radius:var(--radius-sm);
+  display:flex;align-items:center;gap:8px;font-size:14px;
+  transition:background .2s,color .2s;
+}
+.topic-header .fa-folder{color:var(--accent2);font-size:13px;transition:color .2s;}
+.topic-header:hover{background:var(--border);}
+.topic-header.active{background:var(--accent2);color:#fff;}
+.topic-header.active .fa-folder{color:rgba(255,255,255,.8);}
+.topic-header:focus-visible{outline:2px solid var(--accent2);outline-offset:2px;}
+html.dark .topic-header.active{background:#0369a1;}
+.topic-name{flex:1;font-weight:600;}
+.topic-count{
+  font-size:11px;font-weight:700;border-radius:20px;padding:2px 8px;
+  background:rgba(0,0,0,.1);flex-shrink:0;
+}
+.topic-header.active .topic-count{background:rgba(255,255,255,.2);}
+.topic-progress{font-size:11px;flex-shrink:0;opacity:.8;}
+.topic-content{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1);
+  padding:0 4px;
+}
+
+/* ── Lecture Row ── */
+.lecture-entry{
+  padding:11px 0;border-bottom:1px solid var(--border);
+  border-left:3px solid transparent;padding-left:6px;
+  transition:border-color .2s,background .2s;
+}
+.lecture-entry:last-child{border-bottom:none;}
+.lecture-entry.watched{border-left-color:var(--green);}
+.lecture-entry.now-active{
+  border-left-color:var(--accent2);
+  background:rgba(14,165,233,.05);
+}
+.lecture-meta{display:flex;align-items:flex-start;gap:7px;margin-bottom:9px;}
+.watch-btn{
+  background:none;border:2px solid var(--border);color:var(--muted);
+  border-radius:50%;width:24px;height:24px;cursor:pointer;
+  font-size:11px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;transition:all .2s;padding:0;
+}
+.watch-btn:hover{border-color:var(--green);color:var(--green);}
+.lecture-entry.watched .watch-btn{
+  background:var(--green);border-color:var(--green);color:#fff;
+}
+.copy-btn{
+  background:none;border:none;color:var(--muted);cursor:pointer;
+  font-size:12px;padding:3px 5px;border-radius:5px;flex-shrink:0;
+  opacity:0;transition:opacity .2s,color .2s,background .2s;margin-top:1px;
+}
+.lecture-entry:hover .copy-btn,.copy-btn:focus{opacity:1;}
+.copy-btn:hover{color:var(--accent2);background:rgba(14,165,233,.1);}
+.lecture-title{
+  font-size:14px;font-weight:600;color:var(--text);flex:1;line-height:1.45;
+}
+.lecture-entry.watched .lecture-title{
+  color:var(--muted);
+  text-decoration:line-through;
+  text-decoration-color:var(--green);
+}
+.lecture-links{display:flex;flex-wrap:wrap;gap:7px;}
+mark{background:#fef3c7;color:#92400e;border-radius:3px;padding:0 2px;}
+html.dark mark{background:#451a03;color:#fbbf24;}
+
+/* ── Buttons ── */
+.list-item{
+  display:inline-flex;align-items:center;gap:6px;padding:7px 14px;
+  border-radius:20px;text-decoration:none;font-size:13px;font-weight:500;
+  cursor:pointer;border:1.5px solid transparent;
+  transition:all .2s cubic-bezier(.4,0,.2,1);
+}
+.video-item{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;}
+.video-item:hover,.video-item.playing{
+  background:var(--accent);color:#fff;border-color:var(--accent);
+  transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,.3);
+}
+.video-item:focus-visible{outline:2px solid var(--accent2);outline-offset:2px;}
+html.dark .video-item{background:#172554;color:#93c5fd;border-color:#1e40af;}
+html.dark .video-item:hover,html.dark .video-item.playing{
+  background:var(--accent);color:#fff;border-color:var(--accent);
+}
+.pdf-item{background:#fff7ed;color:#c2410c;border-color:#fed7aa;}
+.pdf-item:hover{background:#ea580c;color:#fff;border-color:#ea580c;transform:translateY(-1px);}
+html.dark .pdf-item{background:#431407;color:#fb923c;border-color:#7c2d12;}
+
+/* YouTube button */
+.yt-item{background:#fff1f1;color:#cc0000;border-color:#ffb3b3;}
+.yt-item:hover,.yt-item.playing{background:#cc0000;color:#fff;border-color:#cc0000;transform:translateY(-1px);}
+html.dark .yt-item{background:#3d0000;color:#ff8080;border-color:#660000;}
+html.dark .yt-item:hover,html.dark .yt-item.playing{background:#cc0000;color:#fff;}
+
+/* YouTube embed wrapper */
+.yt-embed-wrapper{
+  display:none;width:100%;aspect-ratio:16/9;
+  border-radius:var(--radius);overflow:hidden;
+  margin-bottom:12px;background:#000;
+  position:sticky;top:calc(var(--header-h) + 3px);z-index:1000;
+  box-shadow:0 8px 32px rgba(0,0,0,.28);
+}
+#yt-frame{width:100%;height:100%;border:none;display:block;}
+.yt-open-link{
+  position:absolute;bottom:10px;right:10px;z-index:5;
+  background:rgba(0,0,0,.75);color:#fff;
+  padding:6px 13px;border-radius:20px;font-size:12px;font-weight:600;
+  text-decoration:none;display:flex;align-items:center;gap:5px;
+  transition:background .2s;backdrop-filter:blur(4px);
+}
+.yt-open-link:hover{background:rgba(204,0,0,.9);}
+
+/* ── Empty state ── */
+.empty-msg{text-align:center;padding:48px;color:var(--muted);font-size:15px;}
+
+/* ── Footer ── */
+.footer-wrap{
+  text-align:center;margin:24px 0 20px;
+  padding:18px 0;border-top:1px solid var(--border);
+}
+.footer-credit-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#0f172a;padding:9px 20px;border-radius:24px;
+  text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.2);
+  transition:transform .2s,box-shadow .2s;
+}
+.footer-credit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3);}
+.shortcut-hint{margin-top:12px;font-size:11px;color:var(--muted);line-height:2;}
+
+/* ── Drawer toggle ── */
+.kk-drawer-toggle{
+  width:34px;height:34px;
+  padding:0!important;
+  background:rgba(255,255,255,.1)!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:8px!important;
+  display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;
+  gap:4px!important;cursor:pointer!important;
+  transition:background .2s!important;flex-shrink:0;
+}
+.kk-drawer-toggle:hover{background:rgba(255,255,255,.22)!important;}
+.kk-drawer-toggle:focus-visible{outline:2px solid var(--accent2)!important;outline-offset:2px!important;}
+.kk-drawer-toggle span{
+  display:block!important;width:16px!important;height:2px!important;
+  background:#fff!important;border-radius:3px!important;
+  transition:all .35s cubic-bezier(.4,0,.2,1)!important;
+}
+.kk-drawer-toggle.active{background:var(--accent2)!important;border-color:var(--accent2)!important;}
+.kk-drawer-toggle.active span:nth-child(1){transform:translateY(6px) rotate(45deg)!important;}
+.kk-drawer-toggle.active span:nth-child(2){opacity:0!important;transform:scale(0)!important;}
+.kk-drawer-toggle.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)!important;}
+
+/* ── Responsive ── */
+@media(max-width:600px){
+  :root{--header-h:44px;}
+  .header-title{font-size:13px;}
+  .accordion-header{padding:13px 14px;}
+  .sub-name{font-size:14px;}
+  .main-container{padding:10px;}
+  .now-playing-nav{display:none;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;}
+}
+
+/* =========================
+   FINAL PLYR MOBILE FIX
+   ========================= */
+
+.player-wrapper,
+.player-wrapper > .plyr,
+.plyr,
+.plyr__video-wrapper,
+.plyr__controls{
+    overflow: visible !important;
+}
+
+.plyr{
+    position: relative !important;
+}
+
+.plyr__menu{
+    z-index: 9999 !important;
+}
+
+.plyr__menu__container{
+    z-index: 99999 !important;
+    max-height: 220px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Mobile speed menu */
+.plyr__menu__container [role="menu"]{
+    max-height: 180px !important;
+    overflow-y: auto !important;
+}
+
+/* Smooth scrolling */
+.plyr__menu__container::-webkit-scrollbar{
+    width: 4px;
+}
+
+.plyr__menu__container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+}
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+.kk-drawer-overlay{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,.75);z-index:8000;opacity:0;visibility:hidden;
+  transition:opacity .4s cubic-bezier(.4,0,.2,1),visibility .4s;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.kk-drawer-overlay.open{opacity:1;visibility:visible;}
+.kk-drawer-nav{
+  position:fixed;top:0;right:0;width:290px;max-width:82vw;height:100%;
+  background:linear-gradient(180deg,rgba(10,20,35,.99),rgba(5,10,15,.99));
+  z-index:8500;transform:translateX(105%);
+  transition:transform .5s cubic-bezier(.77,0,.175,1);
+  display:flex;flex-direction:column;
+  box-shadow:-12px 0 48px rgba(0,0,0,.6);
+  border-left:1px solid rgba(255,255,255,.07);overflow-y:auto;
+}
+.kk-drawer-nav.open{transform:translateX(0);}
+.kk-drawer-header{
+  padding:26px 26px 18px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;
+}
+.kk-drawer-logo{
+  font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;
+  display:flex;align-items:center;gap:10px;color:#f5f5ff;
+}
+.kk-drawer-logo i{color:#00f2ff;}
+.kk-drawer-nav ul{list-style:none;padding:18px 22px;flex:1;margin:0;}
+.kk-drawer-nav li{
+  margin:3px 0;opacity:0;transform:translateX(40px);
+  transition:opacity .4s cubic-bezier(.4,0,.2,1),transform .4s cubic-bezier(.4,0,.2,1);
+}
+.kk-drawer-nav.open li{opacity:1;transform:translateX(0);}
+.kk-drawer-nav.open li:nth-child(1){transition-delay:.07s;}
+.kk-drawer-nav.open li:nth-child(2){transition-delay:.12s;}
+.kk-drawer-nav.open li:nth-child(3){transition-delay:.17s;}
+.kk-drawer-nav.open li:nth-child(4){transition-delay:.22s;}
+.kk-drawer-nav.open li:nth-child(5){transition-delay:.27s;}
+.kk-drawer-nav.open li:nth-child(6){transition-delay:.32s;}
+.kk-drawer-nav.open li:nth-child(7){transition-delay:.37s;}
+.kk-drawer-nav a{
+  font-family:'Outfit',sans-serif;font-size:1.02rem;font-weight:700;
+  color:#f0f0ff;text-decoration:none;display:flex;align-items:center;gap:13px;
+  padding:10px 8px;border-radius:10px;transition:all .3s ease;
+}
+.kk-drawer-nav a:hover{color:#00ffc8;background:rgba(0,255,200,.06);padding-left:15px;}
+.kk-drawer-nav a:focus-visible{outline:2px solid #00f2ff;outline-offset:2px;}
+.kk-drawer-nav a i{
+  font-size:.9rem;width:32px;height:32px;display:flex;
+  align-items:center;justify-content:center;background:rgba(20,10,40,.7);
+  border-radius:9px;flex-shrink:0;transition:all .3s ease;
+}
+.kk-drawer-nav a:hover i{background:#00ffc8;color:#0a0118;}
+.kk-drawer-social{
+  padding:18px 22px 26px;border-top:1px solid rgba(255,255,255,.08);flex-shrink:0;
+}
+.kk-drawer-social-title{
+  font-size:.68rem;color:#888;text-transform:uppercase;
+  letter-spacing:3px;margin-bottom:12px;font-weight:600;font-family:'Outfit',sans-serif;
+}
+.kk-drawer-social-links{display:flex;gap:10px;flex-wrap:wrap;}
+.kk-drawer-social-links a{
+  width:44px;height:44px;background:rgba(20,10,40,.7)!important;
+  border:1px solid rgba(255,255,255,.1);border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.1rem;padding:0!important;gap:0!important;
+  transition:all .35s ease;
+}
+.kk-drawer-social-links a:hover{
+  border-color:#00f2ff!important;color:#00f2ff!important;
+  background:rgba(0,242,255,.07)!important;padding-left:0!important;
+  transform:translateY(-4px) rotate(4deg)!important;
+  box-shadow:0 10px 25px rgba(0,242,255,.15);
+}
+.kk-drawer-social-links a:hover i{background:transparent!important;color:#00f2ff!important;}
+</style>
+</head>
+<body>
+<div id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+<div class="kk-drawer-overlay" id="kk-drawer-overlay" aria-hidden="true"></div>
+<nav class="kk-drawer-nav" id="kk-drawer-nav" aria-label="Main Navigation" role="navigation">
+  <div class="kk-drawer-header">
+    <div class="kk-drawer-logo"><i class="fa-solid fa-cube" aria-hidden="true"></i> Menu</div>
+  </div>
+  <ul role="menu">
+    <li role="menuitem"><a href="https://t.me/inventor_king_24" target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe" aria-hidden="true"></i> Official Website</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24">
+        <i class="fa-solid fa-rocket" aria-hidden="true"></i> App Store</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24">
+        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Tools</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-invoice" aria-hidden="true"></i> Resume Maker</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24">
+        <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Test Series</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24">
+        <i class="fa-solid fa-robot" aria-hidden="true"></i> Ai ChatBot</a></li>
+    <li role="menuitem"><a href="https://t.me/inventor_king_24">
+        <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i> About Me</a></li>
+  </ul>
+  <div class="kk-drawer-social">
+    <div class="kk-drawer-social-title">Connect With Me</div>
+    <div class="kk-drawer-social-links">
+      <a href="https://t.me/inventor_king_24" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter / X">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+      <a href="https://t.me/inventor_king_24" target="_blank" rel="noopener" aria-label="Telegram">
+        <i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</nav>
+
+<header class="header" role="banner">
+  <span class="header-title">Perfect_360_Biology_Batch_for_NEET_UG_2027_All_14_Premium_Resources</span>
+  <div class="header-controls">
+    <button onclick="expandAll()" class="ctrl-btn" title="Expand all (E)" aria-label="Expand all">⊞</button>
+    <button onclick="collapseAll()" class="ctrl-btn" title="Collapse all (C)" aria-label="Collapse all">⊟</button>
+    <button onclick="toggleDark()" class="ctrl-btn" id="darkBtn" title="Toggle dark mode (D)" aria-label="Toggle dark mode">🌙</button>
+    <button class="kk-drawer-toggle" id="kk-drawer-toggle"
+      aria-label="Open menu" aria-expanded="false" aria-haspopup="true">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="progress-bar-track" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="progress-bar-fill" id="progress-fill"></div>
+</div>
+<main class="main-container" id="main-content">
+  <div class="player-wrapper" id="player-wrapper">
+    <video id="player" playsinline controls preload="none"
+      aria-label="Lecture video player"></video>
+    <div class="player-loading" id="player-loading" aria-live="polite" aria-label="Loading video">
+      <div class="spinner" role="status"></div>
+    </div>
+    <div class="player-error" id="player-error" role="alert">
+      <div class="player-error-title">⚠️ Failed to load video</div>
+      <p id="player-error-msg">An error occurred while loading the video.</p>
+      <button class="retry-btn" onclick="retryVideo()">↺ Retry</button>
+      <a class="retry-btn open-link-btn" id="player-error-link" href="#" target="_blank" rel="noopener" style="display:none">🔗 Direct Link Kholo</a>
+    </div>
+  </div>
+<div class="yt-embed-wrapper" id="yt-embed-wrapper">
+  <iframe id="yt-frame" src=""
+    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen
+    aria-label="YouTube video player"></iframe>
+  <a id="yt-open-link" class="yt-open-link" href="#" target="_blank" rel="noopener">
+    &#9654; Open in YouTube
+  </a>
+</div>
+  <div id="now-playing" class="now-playing" aria-live="polite">
+    <span class="now-playing-dot" aria-hidden="true"></span>
+    <span class="now-playing-title" id="now-playing-title"></span>
+    <div class="now-playing-nav">
+      <button class="nav-btn" id="btn-prev" onclick="playPrev()" disabled
+        title="Previous (P)" aria-label="Previous lecture">❮ Prev</button>
+      <button class="nav-btn" id="btn-next" onclick="playNext()"
+        title="Next (N)" aria-label="Next lecture">Next ❯</button>
+    </div>
+  </div>
+  <div id="autonext-banner" class="autonext-banner" role="status">
+    <div class="autonext-count" id="autonext-count">5</div>
+    <div class="autonext-label" id="autonext-label">Loading next…</div>
+    <button class="autonext-play" onclick="playAutoNext()">▶ Play Now</button>
+    <button class="autonext-cancel" onclick="cancelAutoNext()">✕ Cancel</button>
+  </div>
+  <div id="resume-banner" class="resume-banner" role="status">
+    <span id="resume-text"></span>
+    <button class="resume-btn" onclick="resumeVideo()">▶ Resume</button>
+    <button class="resume-dismiss" onclick="dismissResume()" aria-label="Dismiss">✕</button>
+  </div>
+  <div class="search-wrap" role="search">
+    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    <input class="search-input" type="search" id="searchInput"
+      placeholder="Search lectures… (press /)" autocomplete="off"
+      aria-label="Search lectures"
+      oninput="filterContent(this.value)">
+    <button class="search-clear" id="search-clear"
+      onclick="clearSearch()" aria-label="Clear search">✕</button>
+  </div>
+  <div class="toolbar" role="toolbar" aria-label="Lecture info">
+    <span class="badge" aria-label="95 total lectures">95 lectures</span>
+    <span class="badge badge-result" id="search-result-count" style="display:none" aria-live="polite"></span>
+    <span class="badge badge-progress" id="progress-badge" aria-live="polite"></span>
+  </div>
+  <div id="content-container" role="list" aria-label="Course content"><div class="accordion-item"><button class="accordion-header" aria-expanded="false" aria-controls="ac-General"><span class="sub-name">General</span><span class="sub-count" aria-label="95 lectures">95</span><span class="sub-progress" aria-live="polite"></span><span class="acc-arrow" aria-hidden="true">&#43;</span></button><div class="accordion-content" id="ac-General"><div class="lecture-entry" data-lid="lbf85a9c02533" data-gidx="0"><div class="lecture-meta"><button class="watch-btn" data-lid="lbf85a9c02533" onclick="toggleWatched('lbf85a9c02533')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - I">[Plant Kingdom] (Plant Kingdom) Plant Kingdom - I</p><button class="copy-btn" data-lid="lbf85a9c02533" onclick="copyLectureLink('lbf85a9c02533')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4838402/178705686813705430020/178705686813705430020_5430020.m3u8?start=1787049510&amp;end=1787056870" data-lid="lbf85a9c02533" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - I" data-gidx="0" aria-label="Play [Plant Kingdom] (Plant Kingdom) Plant Kingdom - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l56e04fca77a7" data-gidx="1"><div class="lecture-meta"><button class="watch-btn" data-lid="l56e04fca77a7" onclick="toggleWatched('l56e04fca77a7')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - I">[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/32749431787063632_%5BNOTES%5D_Plant_Kingdom_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lc5d1d8f6c468" data-gidx="2"><div class="lecture-meta"><button class="watch-btn" data-lid="lc5d1d8f6c468" onclick="toggleWatched('lc5d1d8f6c468')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - II">[Plant Kingdom] (Plant Kingdom) Plant Kingdom - II</p><button class="copy-btn" data-lid="lc5d1d8f6c468" onclick="copyLectureLink('lc5d1d8f6c468')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4840758/178723020290205430020/178723020290205430020_5430020.m3u8?start=1787222084&amp;end=1787230205" data-lid="lc5d1d8f6c468" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - II" data-gidx="2" aria-label="Play [Plant Kingdom] (Plant Kingdom) Plant Kingdom - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l0bf3ca5c0dd0" data-gidx="3"><div class="lecture-meta"><button class="watch-btn" data-lid="l0bf3ca5c0dd0" onclick="toggleWatched('l0bf3ca5c0dd0')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - III">[Plant Kingdom] (Plant Kingdom) Plant Kingdom - III</p><button class="copy-btn" data-lid="l0bf3ca5c0dd0" onclick="copyLectureLink('l0bf3ca5c0dd0')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4841910/178731630475485430020/178731630475485430020_5430020.m3u8?start=1787308993&amp;end=1787316305" data-lid="l0bf3ca5c0dd0" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - III" data-gidx="3" aria-label="Play [Plant Kingdom] (Plant Kingdom) Plant Kingdom - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l25b991d05335" data-gidx="4"><div class="lecture-meta"><button class="watch-btn" data-lid="l25b991d05335" onclick="toggleWatched('l25b991d05335')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - II">[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/27312931787230692_%5BNOTES%5D_Plant_Kingdom_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l1ddf75312234" data-gidx="5"><div class="lecture-meta"><button class="watch-btn" data-lid="l1ddf75312234" onclick="toggleWatched('l1ddf75312234')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - III">[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/75500981787316824_%5BNOTES%5D_Plant_Kingdom_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l4be60565cfb3" data-gidx="6"><div class="lecture-meta"><button class="watch-btn" data-lid="l4be60565cfb3" onclick="toggleWatched('l4be60565cfb3')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - IV">[Plant Kingdom] (Plant Kingdom) Plant Kingdom - IV</p><button class="copy-btn" data-lid="l4be60565cfb3" onclick="copyLectureLink('l4be60565cfb3')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4844467/178757563439685430020/178757563439685430020_5430020.m3u8?start=1787567714&amp;end=1787575636" data-lid="l4be60565cfb3" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - IV" data-gidx="6" aria-label="Play [Plant Kingdom] (Plant Kingdom) Plant Kingdom - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l4f63fec48737" data-gidx="7"><div class="lecture-meta"><button class="watch-btn" data-lid="l4f63fec48737" onclick="toggleWatched('l4f63fec48737')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - V">[Plant Kingdom] (Plant Kingdom) Plant Kingdom - V</p><button class="copy-btn" data-lid="l4f63fec48737" onclick="copyLectureLink('l4f63fec48737')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4845619/178766216491805430020/178766216491805430020_5430020.m3u8?start=1787653971&amp;end=1787662166" data-lid="l4f63fec48737" data-title="[Plant Kingdom] (Plant Kingdom) Plant Kingdom - V" data-gidx="7" aria-label="Play [Plant Kingdom] (Plant Kingdom) Plant Kingdom - V" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l3bc8655465af" data-gidx="8"><div class="lecture-meta"><button class="watch-btn" data-lid="l3bc8655465af" onclick="toggleWatched('l3bc8655465af')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - IV">[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/441411787576176_%5BNOTES%5D_Plant_Kingdom_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf820be03ee82" data-gidx="9"><div class="lecture-meta"><button class="watch-btn" data-lid="lf820be03ee82" onclick="toggleWatched('lf820be03ee82')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - V">[Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - V</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/35965681787662557_%5BNOTES%5D_Plant_Kingdom_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Plant Kingdom] (Plant Kingdom) [NOTES] Plant Kingdom - V"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lc82fadd5a893" data-gidx="10"><div class="lecture-meta"><button class="watch-btn" data-lid="lc82fadd5a893" onclick="toggleWatched('lc82fadd5a893')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) Biological Classification - I">[Biological Classification] (Biological Classification) Biological Classification - I</p><button class="copy-btn" data-lid="lc82fadd5a893" onclick="copyLectureLink('lc82fadd5a893')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4832463/178645183050925430020/178645183050925430020_5430020.m3u8?start=1786444718&amp;end=1786451832" data-lid="lc82fadd5a893" data-title="[Biological Classification] (Biological Classification) Biological Classification - I" data-gidx="10" aria-label="Play [Biological Classification] (Biological Classification) Biological Classification - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="lb1e49c6748b4" data-gidx="11"><div class="lecture-meta"><button class="watch-btn" data-lid="lb1e49c6748b4" onclick="toggleWatched('lb1e49c6748b4')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) (Notes) Biological Classification - I">[Biological Classification] (Biological Classification) (Notes) Biological Classification - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/49156621786452301_%28Notes%29_Biological_Classification_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Biological Classification] (Biological Classification) (Notes) Biological Classification - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l6bf7aed9113c" data-gidx="12"><div class="lecture-meta"><button class="watch-btn" data-lid="l6bf7aed9113c" onclick="toggleWatched('l6bf7aed9113c')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) Biological Classification - II">[Biological Classification] (Biological Classification) Biological Classification - II</p><button class="copy-btn" data-lid="l6bf7aed9113c" onclick="copyLectureLink('l6bf7aed9113c')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4833569/178653834958855430020/178653834958855430020_5430020.m3u8?start=1786531170&amp;end=1786538350" data-lid="l6bf7aed9113c" data-title="[Biological Classification] (Biological Classification) Biological Classification - II" data-gidx="12" aria-label="Play [Biological Classification] (Biological Classification) Biological Classification - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l729eaa8c1e88" data-gidx="13"><div class="lecture-meta"><button class="watch-btn" data-lid="l729eaa8c1e88" onclick="toggleWatched('l729eaa8c1e88')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) (Notes) Biological Classification - II">[Biological Classification] (Biological Classification) (Notes) Biological Classification - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/1542011786539306_%28NOTES%29_Biological_Classification_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Biological Classification] (Biological Classification) (Notes) Biological Classification - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l4f98b6466778" data-gidx="14"><div class="lecture-meta"><button class="watch-btn" data-lid="l4f98b6466778" onclick="toggleWatched('l4f98b6466778')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) Biological Classification - III">[Biological Classification] (Biological Classification) Biological Classification - III</p><button class="copy-btn" data-lid="l4f98b6466778" onclick="copyLectureLink('l4f98b6466778')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4834561/178662448752595430020/178662448752595430020_5430020.m3u8?start=1786617216&amp;end=1786624488" data-lid="l4f98b6466778" data-title="[Biological Classification] (Biological Classification) Biological Classification - III" data-gidx="14" aria-label="Play [Biological Classification] (Biological Classification) Biological Classification - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l7cbfd021e564" data-gidx="15"><div class="lecture-meta"><button class="watch-btn" data-lid="l7cbfd021e564" onclick="toggleWatched('l7cbfd021e564')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) (Notes) Biological Classification - III">[Biological Classification] (Biological Classification) (Notes) Biological Classification - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/55105881786625551_%28Notes%29_Biological_Classification_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Biological Classification] (Biological Classification) (Notes) Biological Classification - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l26fd7fc07fe7" data-gidx="16"><div class="lecture-meta"><button class="watch-btn" data-lid="l26fd7fc07fe7" onclick="toggleWatched('l26fd7fc07fe7')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) Biological Classification - IV">[Biological Classification] (Biological Classification) Biological Classification - IV</p><button class="copy-btn" data-lid="l26fd7fc07fe7" onclick="copyLectureLink('l26fd7fc07fe7')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4835709/178671189945475430020/178671189945475430020_5430020.m3u8?start=1786704131&amp;end=1786711901" data-lid="l26fd7fc07fe7" data-title="[Biological Classification] (Biological Classification) Biological Classification - IV" data-gidx="16" aria-label="Play [Biological Classification] (Biological Classification) Biological Classification - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l86b63c0273db" data-gidx="17"><div class="lecture-meta"><button class="watch-btn" data-lid="l86b63c0273db" onclick="toggleWatched('l86b63c0273db')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) (NOTES) Biological Classification - IV">[Biological Classification] (Biological Classification) (NOTES) Biological Classification - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/19527981786713581_%28NOTES%29_Biological_Classification_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Biological Classification] (Biological Classification) (NOTES) Biological Classification - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l8f68d4cc4c7e" data-gidx="18"><div class="lecture-meta"><button class="watch-btn" data-lid="l8f68d4cc4c7e" onclick="toggleWatched('l8f68d4cc4c7e')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) Biological Classification - V">[Biological Classification] (Biological Classification) Biological Classification - V</p><button class="copy-btn" data-lid="l8f68d4cc4c7e" onclick="copyLectureLink('l8f68d4cc4c7e')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4837378/178697127130575430020/178697127130575430020_5430020.m3u8?start=1786963150&amp;end=1786971276" data-lid="l8f68d4cc4c7e" data-title="[Biological Classification] (Biological Classification) Biological Classification - V" data-gidx="18" aria-label="Play [Biological Classification] (Biological Classification) Biological Classification - V" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l957c02648e07" data-gidx="19"><div class="lecture-meta"><button class="watch-btn" data-lid="l957c02648e07" onclick="toggleWatched('l957c02648e07')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Biological Classification] (Biological Classification) (NOTES) Biological Classification - V">[Biological Classification] (Biological Classification) (NOTES) Biological Classification - V</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/45209561786971551_%5BNOTES%5D_Biological_Classification_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Biological Classification] (Biological Classification) (NOTES) Biological Classification - V"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l59372cc012fb" data-gidx="20"><div class="lecture-meta"><button class="watch-btn" data-lid="l59372cc012fb" onclick="toggleWatched('l59372cc012fb')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - I">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - I</p><button class="copy-btn" data-lid="l59372cc012fb" onclick="copyLectureLink('l59372cc012fb')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4822785/178550123581561875118/178550123581561875118_1875118.m3u8?start=1785494298&amp;end=1785501236" data-lid="l59372cc012fb" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - I" data-gidx="20" aria-label="Play [Cell Cycle &amp;amp; Cell Division] (Cell Cycle &amp;amp; Cell Division) Cell Cycle &amp;amp; Cell Division - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l94b588703406" data-gidx="21"><div class="lecture-meta"><button class="watch-btn" data-lid="l94b588703406" onclick="toggleWatched('l94b588703406')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - I">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/23868681785501867_%28NOTES%29_Cell_Cycle_Cell_Division_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf85592aa8859" data-gidx="22"><div class="lecture-meta"><button class="watch-btn" data-lid="lf85592aa8859" onclick="toggleWatched('lf85592aa8859')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - II">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - II</p><button class="copy-btn" data-lid="lf85592aa8859" onclick="copyLectureLink('lf85592aa8859')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4823764/178558775179011875118/178558775179011875118_1875118.m3u8?start=1785580859&amp;end=1785587751" data-lid="lf85592aa8859" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - II" data-gidx="22" aria-label="Play [Cell Cycle &amp;amp; Cell Division] (Cell Cycle &amp;amp; Cell Division) Cell Cycle &amp;amp; Cell Division - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l15e4a7bcef75" data-gidx="23"><div class="lecture-meta"><button class="watch-btn" data-lid="l15e4a7bcef75" onclick="toggleWatched('l15e4a7bcef75')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - II">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/33319961785656465_%28NOTES%29_Cell_Cycle_%26_Cell_Division_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf54b21334ea8" data-gidx="24"><div class="lecture-meta"><button class="watch-btn" data-lid="lf54b21334ea8" onclick="toggleWatched('lf54b21334ea8')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - III">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - III</p><button class="copy-btn" data-lid="lf54b21334ea8" onclick="copyLectureLink('lf54b21334ea8')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4824766/178575987785705430020/178575987785705430020_5430020.m3u8?start=1785753303&amp;end=1785759879" data-lid="lf54b21334ea8" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - III" data-gidx="24" aria-label="Play [Cell Cycle &amp;amp; Cell Division] (Cell Cycle &amp;amp; Cell Division) Cell Cycle &amp;amp; Cell Division - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l0435230abb64" data-gidx="25"><div class="lecture-meta"><button class="watch-btn" data-lid="l0435230abb64" onclick="toggleWatched('l0435230abb64')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - IV">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - IV</p><button class="copy-btn" data-lid="l0435230abb64" onclick="copyLectureLink('l0435230abb64')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4825917/178584694148935430020/178584694148935430020_5430020.m3u8?start=1785839587&amp;end=1785846943" data-lid="l0435230abb64" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) Cell Cycle &amp; Cell Division - IV" data-gidx="25" aria-label="Play [Cell Cycle &amp;amp; Cell Division] (Cell Cycle &amp;amp; Cell Division) Cell Cycle &amp;amp; Cell Division - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="la9adb226b622" data-gidx="26"><div class="lecture-meta"><button class="watch-btn" data-lid="la9adb226b622" onclick="toggleWatched('la9adb226b622')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - III">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/45043351785760801_%28NOTES%29_Cell_Cycle_%26_Cell_Division_III_.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) (NOTES) Cell Cycle &amp; Cell Division - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lfd1c88c5e2f3" data-gidx="27"><div class="lecture-meta"><button class="watch-btn" data-lid="lfd1c88c5e2f3" onclick="toggleWatched('lfd1c88c5e2f3')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) [NOTES] Cell Cycle &amp; Cell Cell Division - IV">[Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) [NOTES] Cell Cycle &amp; Cell Cell Division - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/44861241785847498_%5BNOTES%5D_Cell_Cycle_%26_Cell_Cell_Division_IV_.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell Cycle &amp; Cell Division] (Cell Cycle &amp; Cell Division) [NOTES] Cell Cycle &amp; Cell Cell Division - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="ldd537b33c21f" data-gidx="28"><div class="lecture-meta"><button class="watch-btn" data-lid="ldd537b33c21f" onclick="toggleWatched('ldd537b33c21f')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) The Living World - I">[The Living World] (The Living World) The Living World - I</p><button class="copy-btn" data-lid="ldd537b33c21f" onclick="copyLectureLink('ldd537b33c21f')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4829362/178610655140605430020/178610655140605430020_5430020.m3u8?start=1786098741&amp;end=1786106553" data-lid="ldd537b33c21f" data-title="[The Living World] (The Living World) The Living World - I" data-gidx="28" aria-label="Play [The Living World] (The Living World) The Living World - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="lc45c3524a252" data-gidx="29"><div class="lecture-meta"><button class="watch-btn" data-lid="lc45c3524a252" onclick="toggleWatched('lc45c3524a252')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) The Living World - II">[The Living World] (The Living World) The Living World - II</p><button class="copy-btn" data-lid="lc45c3524a252" onclick="copyLectureLink('lc45c3524a252')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4830127/178619243167705430020/178619243167705430020_5430020.m3u8?start=1786185456&amp;end=1786192432" data-lid="lc45c3524a252" data-title="[The Living World] (The Living World) The Living World - II" data-gidx="29" aria-label="Play [The Living World] (The Living World) The Living World - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l2ffdb2c4206a" data-gidx="30"><div class="lecture-meta"><button class="watch-btn" data-lid="l2ffdb2c4206a" onclick="toggleWatched('l2ffdb2c4206a')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) (NOTES) The Living World - I">[The Living World] (The Living World) (NOTES) The Living World - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/49362391786107159_%28NOTES%29_The_Living_World_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [The Living World] (The Living World) (NOTES) The Living World - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="laf7a39e62476" data-gidx="31"><div class="lecture-meta"><button class="watch-btn" data-lid="laf7a39e62476" onclick="toggleWatched('laf7a39e62476')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) (NOTES) The Living World - II">[The Living World] (The Living World) (NOTES) The Living World - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/9588021786194435_%28NOTES%29_The_Living_World_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [The Living World] (The Living World) (NOTES) The Living World - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l487e5f4bfdfc" data-gidx="32"><div class="lecture-meta"><button class="watch-btn" data-lid="l487e5f4bfdfc" onclick="toggleWatched('l487e5f4bfdfc')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) The Living World - III">[The Living World] (The Living World) The Living World - III</p><button class="copy-btn" data-lid="l487e5f4bfdfc" onclick="copyLectureLink('l487e5f4bfdfc')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4831367/178636510936455430020/178636510936455430020_5430020.m3u8?start=1786358106&amp;end=1786365111" data-lid="l487e5f4bfdfc" data-title="[The Living World] (The Living World) The Living World - III" data-gidx="32" aria-label="Play [The Living World] (The Living World) The Living World - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l4c7527a882a3" data-gidx="33"><div class="lecture-meta"><button class="watch-btn" data-lid="l4c7527a882a3" onclick="toggleWatched('l4c7527a882a3')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[The Living World] (The Living World) (NOTES) The Living World - III">[The Living World] (The Living World) (NOTES) The Living World - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/49211421786366064_%28NOTES%29_The_Living_World_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [The Living World] (The Living World) (NOTES) The Living World - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l6853aa897ee7" data-gidx="34"><div class="lecture-meta"><button class="watch-btn" data-lid="l6853aa897ee7" onclick="toggleWatched('l6853aa897ee7')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - I">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - I</p><button class="copy-btn" data-lid="l6853aa897ee7" onclick="copyLectureLink('l6853aa897ee7')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4846971/178774756752515430020/178774756752515430020_5430020.m3u8?start=1787740367&amp;end=1787747569" data-lid="l6853aa897ee7" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - I" data-gidx="34" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="lcfb956f5ab01" data-gidx="35"><div class="lecture-meta"><button class="watch-btn" data-lid="lcfb956f5ab01" onclick="toggleWatched('lcfb956f5ab01')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - I">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/39516731787748284_%5BNOTES%5D_Animal_Kingdom_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l5e480e7a278e" data-gidx="36"><div class="lecture-meta"><button class="watch-btn" data-lid="l5e480e7a278e" onclick="toggleWatched('l5e480e7a278e')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - II">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - II</p><button class="copy-btn" data-lid="l5e480e7a278e" onclick="copyLectureLink('l5e480e7a278e')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4848353/178783250636315430020/178783250636315430020_5430020.m3u8?start=1787827321&amp;end=1787832508" data-lid="l5e480e7a278e" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - II" data-gidx="36" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l0cfe4006837f" data-gidx="37"><div class="lecture-meta"><button class="watch-btn" data-lid="l0cfe4006837f" onclick="toggleWatched('l0cfe4006837f')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - II">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/43749221787832666_%5BNOTES%5D_Animal_Kingdom_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l58e1ff989d9f" data-gidx="38"><div class="lecture-meta"><button class="watch-btn" data-lid="l58e1ff989d9f" onclick="toggleWatched('l58e1ff989d9f')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - III">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - III</p><button class="copy-btn" data-lid="l58e1ff989d9f" onclick="copyLectureLink('l58e1ff989d9f')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4849982/178800648647315430020/178800648647315430020_5430020.m3u8?start=1787999733&amp;end=1788006487" data-lid="l58e1ff989d9f" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - III" data-gidx="38" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l8fb5ccbd6537" data-gidx="39"><div class="lecture-meta"><button class="watch-btn" data-lid="l8fb5ccbd6537" onclick="toggleWatched('l8fb5ccbd6537')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - IV">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - IV</p><button class="copy-btn" data-lid="l8fb5ccbd6537" onclick="copyLectureLink('l8fb5ccbd6537')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4852292/178817677257931875118/178817677257931875118_1875118.m3u8?start=1788172828&amp;end=1788176773" data-lid="l8fb5ccbd6537" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - IV" data-gidx="39" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l1f6724318590" data-gidx="40"><div class="lecture-meta"><button class="watch-btn" data-lid="l1f6724318590" onclick="toggleWatched('l1f6724318590')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - III">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/65686531788007162_%5BNOTES%5D_Animal_Kingdom_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l0853d16cdccf" data-gidx="41"><div class="lecture-meta"><button class="watch-btn" data-lid="l0853d16cdccf" onclick="toggleWatched('l0853d16cdccf')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - V">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - V</p><button class="copy-btn" data-lid="l0853d16cdccf" onclick="copyLectureLink('l0853d16cdccf')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4854673/178827054592725430020/178827054592725430020_5430020.m3u8?start=1788260803&amp;end=1788270547" data-lid="l0853d16cdccf" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - V" data-gidx="41" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - V" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l6260fca1d001" data-gidx="42"><div class="lecture-meta"><button class="watch-btn" data-lid="l6260fca1d001" onclick="toggleWatched('l6260fca1d001')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - IV">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/70893631788177756_%5BNOTES%5D_Animal_Kingdom_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l40221af6cb1e" data-gidx="43"><div class="lecture-meta"><button class="watch-btn" data-lid="l40221af6cb1e" onclick="toggleWatched('l40221af6cb1e')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VI">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VI</p><button class="copy-btn" data-lid="l40221af6cb1e" onclick="copyLectureLink('l40221af6cb1e')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4857056/178843862339955430020/178843862339955430020_5430020.m3u8?start=1788431470&amp;end=1788438625" data-lid="l40221af6cb1e" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VI" data-gidx="43" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - VI" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l2a00d9aac016" data-gidx="44"><div class="lecture-meta"><button class="watch-btn" data-lid="l2a00d9aac016" onclick="toggleWatched('l2a00d9aac016')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - V">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - V</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/72894551788270993_%5BNOTES%5D_Animal_Kingdom_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - V"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l130fa2d1efa3" data-gidx="45"><div class="lecture-meta"><button class="watch-btn" data-lid="l130fa2d1efa3" onclick="toggleWatched('l130fa2d1efa3')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VI">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VI</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/11404671788438958_%5BNOTES%5D_Animal_Kingdom_-_VI.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VI"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="ld7a0855c5966" data-gidx="46"><div class="lecture-meta"><button class="watch-btn" data-lid="ld7a0855c5966" onclick="toggleWatched('ld7a0855c5966')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VII">[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VII</p><button class="copy-btn" data-lid="ld7a0855c5966" onclick="copyLectureLink('ld7a0855c5966')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4858115/178852392556295430020/178852392556295430020_5430020.m3u8?start=1788517977&amp;end=1788523928" data-lid="ld7a0855c5966" data-title="[Animal Kingdom] (Animal Kingdom) Animal Kingdom - VII" data-gidx="46" aria-label="Play [Animal Kingdom] (Animal Kingdom) Animal Kingdom - VII" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l45787e27a56d" data-gidx="47"><div class="lecture-meta"><button class="watch-btn" data-lid="l45787e27a56d" onclick="toggleWatched('l45787e27a56d')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VII">[Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VII</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/58029991788524195_%5BNOTES%5D_Animal_Kingdom_-_VII.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Animal Kingdom] (Animal Kingdom) [NOTES] Animal Kingdom - VII"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lef39d1532418" data-gidx="48"><div class="lecture-meta"><button class="watch-btn" data-lid="lef39d1532418" onclick="toggleWatched('lef39d1532418')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - I">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - I</p><button class="copy-btn" data-lid="lef39d1532418" onclick="copyLectureLink('lef39d1532418')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4858788/178861175323235430020/178861175323235430020_5430020.m3u8?start=1788604490&amp;end=1788611755" data-lid="lef39d1532418" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - I" data-gidx="48" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="la02281607279" data-gidx="49"><div class="lecture-meta"><button class="watch-btn" data-lid="la02281607279" onclick="toggleWatched('la02281607279')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - II">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - II</p><button class="copy-btn" data-lid="la02281607279" onclick="copyLectureLink('la02281607279')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4859926/178878351241765430020/178878351241765430020_5430020.m3u8?start=1788777428&amp;end=1788783513" data-lid="la02281607279" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - II" data-gidx="49" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l857e5bcdb74c" data-gidx="50"><div class="lecture-meta"><button class="watch-btn" data-lid="l857e5bcdb74c" onclick="toggleWatched('l857e5bcdb74c')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants (All EXAMPLES) - I">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants (All EXAMPLES) - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/46493341788612153_%5BNOTES%5D_Morphology_of_Flowering_Plants_%28All_EXAMPLES%29_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants (All EXAMPLES) - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l8f83de8f19e8" data-gidx="51"><div class="lecture-meta"><button class="watch-btn" data-lid="l8f83de8f19e8" onclick="toggleWatched('l8f83de8f19e8')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - III">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - III</p><button class="copy-btn" data-lid="l8f83de8f19e8" onclick="copyLectureLink('l8f83de8f19e8')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4861241/178887171074105430020/178887171074105430020_5430020.m3u8?start=1788863548&amp;end=1788871714" data-lid="l8f83de8f19e8" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - III" data-gidx="51" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l1f5fcdfa674b" data-gidx="52"><div class="lecture-meta"><button class="watch-btn" data-lid="l1f5fcdfa674b" onclick="toggleWatched('l1f5fcdfa674b')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - II">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/62372641788783776_%5BNOTES%5D_Morphology_of_Flowering_Plants_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lbe8fcedd7166" data-gidx="53"><div class="lecture-meta"><button class="watch-btn" data-lid="lbe8fcedd7166" onclick="toggleWatched('lbe8fcedd7166')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - IV">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - IV</p><button class="copy-btn" data-lid="lbe8fcedd7166" onclick="copyLectureLink('lbe8fcedd7166')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4863811/178904436655695430020/178904436655695430020_5430020.m3u8?start=1789036563&amp;end=1789044369" data-lid="lbe8fcedd7166" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - IV" data-gidx="53" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l3be25a7a6697" data-gidx="54"><div class="lecture-meta"><button class="watch-btn" data-lid="l3be25a7a6697" onclick="toggleWatched('l3be25a7a6697')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - III">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/51758451788872183_%5BNOTES%5D_Morphology_of_Flowering_Plants_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lfbff1dff309b" data-gidx="55"><div class="lecture-meta"><button class="watch-btn" data-lid="lfbff1dff309b" onclick="toggleWatched('lfbff1dff309b')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - V">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - V</p><button class="copy-btn" data-lid="lfbff1dff309b" onclick="copyLectureLink('lfbff1dff309b')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4864846/178912966854235430020/178912966854235430020_5430020.m3u8?start=1789123209&amp;end=1789129670" data-lid="lfbff1dff309b" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - V" data-gidx="55" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - V" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l3fa8ee22d957" data-gidx="56"><div class="lecture-meta"><button class="watch-btn" data-lid="l3fa8ee22d957" onclick="toggleWatched('l3fa8ee22d957')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - VI">[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - VI</p><button class="copy-btn" data-lid="l3fa8ee22d957" onclick="copyLectureLink('l3fa8ee22d957')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4865644/178921549864395430020/178921549864395430020_5430020.m3u8?start=1789209416&amp;end=1789215499" data-lid="l3fa8ee22d957" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - VI" data-gidx="56" aria-label="Play [Morphology of Flowering Plants] (Morphology of Flowering Plants) Morphology of Flowering Plants - VI" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l5b03e43f62ac" data-gidx="57"><div class="lecture-meta"><button class="watch-btn" data-lid="l5b03e43f62ac" onclick="toggleWatched('l5b03e43f62ac')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - IV">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/14068961789044600_%5BNOTES%5D_Morphology_of_Flowering_Plants_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l98b01ad1b8e4" data-gidx="58"><div class="lecture-meta"><button class="watch-btn" data-lid="l98b01ad1b8e4" onclick="toggleWatched('l98b01ad1b8e4')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - V">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - V</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/31356041789129933_%5BNOTES%7D_Morphology_of_Flowering_Plants_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - V"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l4995c2d59909" data-gidx="59"><div class="lecture-meta"><button class="watch-btn" data-lid="l4995c2d59909" onclick="toggleWatched('l4995c2d59909')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - VI">[Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - VI</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/48415611789215939_%5BNOTES%5D_Morphology_of_Flowering_Plants_-_VI.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Morphology of Flowering Plants] (Morphology of Flowering Plants) [NOTES] Morphology of Flowering Plants - VI"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="le63168fe9227" data-gidx="60"><div class="lecture-meta"><button class="watch-btn" data-lid="le63168fe9227" onclick="toggleWatched('le63168fe9227')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - I">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - I</p><button class="copy-btn" data-lid="le63168fe9227" onclick="copyLectureLink('le63168fe9227')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4866808/178938908549205430020/178938908549205430020_5430020.m3u8?start=1789382146&amp;end=1789389086" data-lid="le63168fe9227" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - I" data-gidx="60" aria-label="Play [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="lfa18f6945632" data-gidx="61"><div class="lecture-meta"><button class="watch-btn" data-lid="lfa18f6945632" onclick="toggleWatched('lfa18f6945632')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - II">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - II</p><button class="copy-btn" data-lid="lfa18f6945632" onclick="copyLectureLink('lfa18f6945632')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4868061/178947634112945430020/178947634112945430020_5430020.m3u8?start=1789468494&amp;end=1789476343" data-lid="lfa18f6945632" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - II" data-gidx="61" aria-label="Play [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l18019b0d9d68" data-gidx="62"><div class="lecture-meta"><button class="watch-btn" data-lid="l18019b0d9d68" onclick="toggleWatched('l18019b0d9d68')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - I">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/39380321789390146_%5BNOTES%5D_Anatomy_of_Flowering_Plants_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="ld251fad01040" data-gidx="63"><div class="lecture-meta"><button class="watch-btn" data-lid="ld251fad01040" onclick="toggleWatched('ld251fad01040')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - II">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/17875621789476686_%5BNOTES%5D_Anatomy_of_Flowering_Plants_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf27b46da4069" data-gidx="64"><div class="lecture-meta"><button class="watch-btn" data-lid="lf27b46da4069" onclick="toggleWatched('lf27b46da4069')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - III">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - III</p><button class="copy-btn" data-lid="lf27b46da4069" onclick="copyLectureLink('lf27b46da4069')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4870524/178964909637865430020/178964909637865430020_5430020.m3u8?start=1789641424&amp;end=1789649098" data-lid="lf27b46da4069" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - III" data-gidx="64" aria-label="Play [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l11f2eaf23885" data-gidx="65"><div class="lecture-meta"><button class="watch-btn" data-lid="l11f2eaf23885" onclick="toggleWatched('l11f2eaf23885')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - IV">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - IV</p><button class="copy-btn" data-lid="l11f2eaf23885" onclick="copyLectureLink('l11f2eaf23885')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4871726/178973485166055430020/178973485166055430020_5430020.m3u8?start=1789727918&amp;end=1789734852" data-lid="l11f2eaf23885" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - IV" data-gidx="65" aria-label="Play [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/16711561789735155_%5BNOTES%5D_Anatomy_of_Flowering_Plants_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) Anatomy of Flowering Plants - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l0f6ad05cb637" data-gidx="66"><div class="lecture-meta"><button class="watch-btn" data-lid="l0f6ad05cb637" onclick="toggleWatched('l0f6ad05cb637')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - III">[Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/57975261789649407_%5BNOTES%5D_Anatomy_of_Flowering_Plants_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Anatomy of Flowering Plants] (Anatomy of Flowering Plants) [NOTES] Anatomy of Flowering Plants - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l0034e7c0afe2" data-gidx="67"><div class="lecture-meta"><button class="watch-btn" data-lid="l0034e7c0afe2" onclick="toggleWatched('l0034e7c0afe2')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - I">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - I</p><button class="copy-btn" data-lid="l0034e7c0afe2" onclick="copyLectureLink('l0034e7c0afe2')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4874057/178999402058155430020/178999402058155430020_5430020.m3u8?start=1789986868&amp;end=1789994023" data-lid="l0034e7c0afe2" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - I" data-gidx="67" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="lc0cf4747abb0" data-gidx="68"><div class="lecture-meta"><button class="watch-btn" data-lid="lc0cf4747abb0" onclick="toggleWatched('lc0cf4747abb0')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - I">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/68999011789994605_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l1849d17e0d09" data-gidx="69"><div class="lecture-meta"><button class="watch-btn" data-lid="l1849d17e0d09" onclick="toggleWatched('l1849d17e0d09')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - II">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - II</p><button class="copy-btn" data-lid="l1849d17e0d09" onclick="copyLectureLink('l1849d17e0d09')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4875401/179008016675585430020/179008016675585430020_5430020.m3u8?start=1790073445&amp;end=1790080168" data-lid="l1849d17e0d09" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - II" data-gidx="69" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l9e01614667b9" data-gidx="70"><div class="lecture-meta"><button class="watch-btn" data-lid="l9e01614667b9" onclick="toggleWatched('l9e01614667b9')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - III">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - III</p><button class="copy-btn" data-lid="l9e01614667b9" onclick="copyLectureLink('l9e01614667b9')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4881563/179033974012315430020/179033974012315430020_5430020.m3u8?start=1790332721&amp;end=1790339744" data-lid="l9e01614667b9" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - III" data-gidx="70" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l232e68f770ef" data-gidx="71"><div class="lecture-meta"><button class="watch-btn" data-lid="l232e68f770ef" onclick="toggleWatched('l232e68f770ef')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - II">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/38774621790080752_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lcf80f97fef8d" data-gidx="72"><div class="lecture-meta"><button class="watch-btn" data-lid="lcf80f97fef8d" onclick="toggleWatched('lcf80f97fef8d')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - III">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/58081951790340060_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lc57a8f341dd3" data-gidx="73"><div class="lecture-meta"><button class="watch-btn" data-lid="lc57a8f341dd3" onclick="toggleWatched('lc57a8f341dd3')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - IV">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - IV</p><button class="copy-btn" data-lid="lc57a8f341dd3" onclick="copyLectureLink('lc57a8f341dd3')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4882777/179042631599295430020/179042631599295430020_5430020.m3u8?start=1790418802&amp;end=1790426316" data-lid="lc57a8f341dd3" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - IV" data-gidx="73" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l9c79adfc93bf" data-gidx="74"><div class="lecture-meta"><button class="watch-btn" data-lid="l9c79adfc93bf" onclick="toggleWatched('l9c79adfc93bf')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - V">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - V</p><button class="copy-btn" data-lid="l9c79adfc93bf" onclick="copyLectureLink('l9c79adfc93bf')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4885618/179059869827685430020/179059869827685430020_5430020.m3u8?start=1790591913&amp;end=1790598700" data-lid="l9c79adfc93bf" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - V" data-gidx="74" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higer Plants - V" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l32535c9d638b" data-gidx="75"><div class="lecture-meta"><button class="watch-btn" data-lid="l32535c9d638b" onclick="toggleWatched('l32535c9d638b')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - IV">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/44158501790426786_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l5518dc976763" data-gidx="76"><div class="lecture-meta"><button class="watch-btn" data-lid="l5518dc976763" onclick="toggleWatched('l5518dc976763')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - V">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - V</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/34475231790599076_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - V"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l0b6f5bfe7bd6" data-gidx="77"><div class="lecture-meta"><button class="watch-btn" data-lid="l0b6f5bfe7bd6" onclick="toggleWatched('l0b6f5bfe7bd6')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higher Plants - VI">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higher Plants - VI</p><button class="copy-btn" data-lid="l0b6f5bfe7bd6" onclick="copyLectureLink('l0b6f5bfe7bd6')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4887309/179068628776061875118/179068628776061875118_1875118.m3u8?start=1790678865&amp;end=1790686288" data-lid="l0b6f5bfe7bd6" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higher Plants - VI" data-gidx="77" aria-label="Play [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) Photosynthesis in Higher Plants - VI" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l8e2093ffd798" data-gidx="78"><div class="lecture-meta"><button class="watch-btn" data-lid="l8e2093ffd798" onclick="toggleWatched('l8e2093ffd798')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - VI">[Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - VI</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/12266111790698382_%5BNOTES%5D_Photosynthesis_in_Higher_Plants_-_VI.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Photosynthesis in Higher Plants] (Photosynthesis in Higher Plants) [NOTES] Photosynthesis in Higer Plants - VI"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l591a43bf6dbf" data-gidx="79"><div class="lecture-meta"><button class="watch-btn" data-lid="l591a43bf6dbf" onclick="toggleWatched('l591a43bf6dbf')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - I">[Respiration in Plants] (Respiration in Plants) Respiration in Plants - I</p><button class="copy-btn" data-lid="l591a43bf6dbf" onclick="copyLectureLink('l591a43bf6dbf')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4889551/179077204146701875118/179077204146701875118_1875118.m3u8?start=1790764966&amp;end=1790772041" data-lid="l591a43bf6dbf" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - I" data-gidx="79" aria-label="Play [Respiration in Plants] (Respiration in Plants) Respiration in Plants - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l45843e7fdc07" data-gidx="80"><div class="lecture-meta"><button class="watch-btn" data-lid="l45843e7fdc07" onclick="toggleWatched('l45843e7fdc07')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - I">[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - I</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/38892071790772686_%5BNOTES%5D_Respiration_in_Plants_-_I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - I"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l462f3726fefa" data-gidx="81"><div class="lecture-meta"><button class="watch-btn" data-lid="l462f3726fefa" onclick="toggleWatched('l462f3726fefa')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - II">[Respiration in Plants] (Respiration in Plants) Respiration in Plants - II</p><button class="copy-btn" data-lid="l462f3726fefa" onclick="copyLectureLink('l462f3726fefa')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4891854/179085882127661875118/179085882127661875118_1875118.m3u8?start=1790851015&amp;end=1790858822" data-lid="l462f3726fefa" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - II" data-gidx="81" aria-label="Play [Respiration in Plants] (Respiration in Plants) Respiration in Plants - II" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l45daa98a6d06" data-gidx="82"><div class="lecture-meta"><button class="watch-btn" data-lid="l45daa98a6d06" onclick="toggleWatched('l45daa98a6d06')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - II">[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - II</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/55840051790859400_%5BNOTES%5D_Respiration_in_Plants_-_II.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - II"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l0e00c83f81d8" data-gidx="83"><div class="lecture-meta"><button class="watch-btn" data-lid="l0e00c83f81d8" onclick="toggleWatched('l0e00c83f81d8')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - III">[Respiration in Plants] (Respiration in Plants) Respiration in Plants - III</p><button class="copy-btn" data-lid="l0e00c83f81d8" onclick="copyLectureLink('l0e00c83f81d8')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4893270/179103055316851875118/179103055316851875118_1875118.m3u8?start=1791023801&amp;end=1791030554" data-lid="l0e00c83f81d8" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - III" data-gidx="83" aria-label="Play [Respiration in Plants] (Respiration in Plants) Respiration in Plants - III" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l9ecb202f2c64" data-gidx="84"><div class="lecture-meta"><button class="watch-btn" data-lid="l9ecb202f2c64" onclick="toggleWatched('l9ecb202f2c64')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - III">[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - III</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/61634061791031073_%5BNOTES%5D_Respiration_in_Plants_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - III"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l1873ac67689d" data-gidx="85"><div class="lecture-meta"><button class="watch-btn" data-lid="l1873ac67689d" onclick="toggleWatched('l1873ac67689d')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - IV">[Respiration in Plants] (Respiration in Plants) Respiration in Plants - IV</p><button class="copy-btn" data-lid="l1873ac67689d" onclick="copyLectureLink('l1873ac67689d')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4894386/179120500943451875118/179120500943451875118_1875118.m3u8?start=1791196705&amp;end=1791205009" data-lid="l1873ac67689d" data-title="[Respiration in Plants] (Respiration in Plants) Respiration in Plants - IV" data-gidx="85" aria-label="Play [Respiration in Plants] (Respiration in Plants) Respiration in Plants - IV" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l6427d6facd38" data-gidx="86"><div class="lecture-meta"><button class="watch-btn" data-lid="l6427d6facd38" onclick="toggleWatched('l6427d6facd38')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - IV">[Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - IV</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/23637951791205372_%5BNOTES%5D_Respiration_in_Plants_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Respiration in Plants] (Respiration in Plants) [NOTES] Respiration in Plants - IV"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l2bd84d31536b" data-gidx="87"><div class="lecture-meta"><button class="watch-btn" data-lid="l2bd84d31536b" onclick="toggleWatched('l2bd84d31536b')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Plant Growth and Development] (Plant Growth and Development) Plant Growth &amp; Development - I">[Plant Growth and Development] (Plant Growth and Development) Plant Growth &amp; Development - I</p><button class="copy-btn" data-lid="l2bd84d31536b" onclick="copyLectureLink('l2bd84d31536b')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="https://d2a3lqpovax4ym.cloudfront.net/out/v1/ChannelGrp_6a5df171a8907/Channel_6a5df17184ff2/non_drm_hls_endpoint_1784541554/index.m3u8" data-lid="l2bd84d31536b" data-title="[Plant Growth and Development] (Plant Growth and Development) Plant Growth &amp; Development - I" data-gidx="87" aria-label="Play [Plant Growth and Development] (Plant Growth and Development) Plant Growth &amp;amp; Development - I" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l99c722f4bf0d" data-gidx="88"><div class="lecture-meta"><button class="watch-btn" data-lid="l99c722f4bf0d" onclick="toggleWatched('l99c722f4bf0d')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Test Series ] (Test Series ) Test Series">[Test Series ] (Test Series ) Test Series</p></div><div class="lecture-links"><a href="https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/16599671784967926_Perfect_360_Biology_Batch_Test_Series_NEET_2027.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Test Series ] (Test Series ) Test Series"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l16f0d07d2f35" data-gidx="89"><div class="lecture-meta"><button class="watch-btn" data-lid="l16f0d07d2f35" onclick="toggleWatched('l16f0d07d2f35')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="l16f0d07d2f35" onclick="copyLectureLink('l16f0d07d2f35')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="The Unit of Life] (Cell : The Unit of Life) Cell The Unit of Life - V:https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4819659/178524229090701875118/178524229090701875118_1875118.m3u8?start=1785234862&amp;end=1785242290" data-lid="l16f0d07d2f35" data-title="[Cell" data-gidx="89" aria-label="Play [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a></div></div><div class="lecture-entry" data-lid="l6e25a0ce1fda" data-gidx="90"><div class="lecture-meta"><button class="watch-btn" data-lid="l6e25a0ce1fda" onclick="toggleWatched('l6e25a0ce1fda')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="l6e25a0ce1fda" onclick="copyLectureLink('l6e25a0ce1fda')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="The Unit of Life] (Cell : The Unit of Life) Cell : The Unit of Life - VI:https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4822025/178542368734501875118/178542368734501875118_1875118.m3u8?start=1785407661&amp;end=1785423688" data-lid="l6e25a0ce1fda" data-title="[Cell" data-gidx="90" aria-label="Play [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a><a href="The Unit of Life] (Cell : The Unit of Life) (NOTES) Cell : The Unit of Life - I:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/13841901784825877_Cell_The_Unit_of_Life__I.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf16f2667dde0" data-gidx="91"><div class="lecture-meta"><button class="watch-btn" data-lid="lf16f2667dde0" onclick="toggleWatched('lf16f2667dde0')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="lf16f2667dde0" onclick="copyLectureLink('lf16f2667dde0')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="The Unit of Life] (Cell : The Unit of Life) Cell : The Unit Of Life - II:https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4816796/178489749580191875118/178489749580191875118_1875118.m3u8?start=1784889518&amp;end=1784897496" data-lid="lf16f2667dde0" data-title="[Cell" data-gidx="91" aria-label="Play [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a><a href="The Unit of Life] (Cell : The Unit of Life) (NOTES) Cell : The Unit of Life - II:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/75240281784898505_Cell_The_Unit_of_Life_-_II_Notes.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="lf3fb75c266c0" data-gidx="92"><div class="lecture-meta"><button class="watch-btn" data-lid="lf3fb75c266c0" onclick="toggleWatched('lf3fb75c266c0')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="lf3fb75c266c0" onclick="copyLectureLink('lf3fb75c266c0')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="The Unit of Life] (Cell : The Unit of Life) Cell : The Unit of Life - III:https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4817492/178498336940651875118/178498336940651875118_1875118.m3u8?start=1784975750&amp;end=1784983369" data-lid="lf3fb75c266c0" data-title="[Cell" data-gidx="92" aria-label="Play [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a><a href="The Unit of Life] (Cell : The Unit of Life) (NOTES) Cell : The Unit of Life - III:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/76989401784984601_Cell_The_Unit_Of_Life_-_III.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l924be02b4b9c" data-gidx="93"><div class="lecture-meta"><button class="watch-btn" data-lid="l924be02b4b9c" onclick="toggleWatched('l924be02b4b9c')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="l924be02b4b9c" onclick="copyLectureLink('l924be02b4b9c')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item" role="button" tabindex="0" data-url="The Unit of Life] (Cell : The Unit of Life) Cell : The Unit of Life - IV:https://d3b5wmtjst48m7.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4818668/178515571686101875118/178515571686101875118_1875118.m3u8?start=1785148489&amp;end=1785155716" data-lid="l924be02b4b9c" data-title="[Cell" data-gidx="93" aria-label="Play [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;Play</a><a href="The Unit of Life] (Cell : The Unit of Life) (NOTES) Cell The Unit of Life - IV:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/1396481785156876_%28Notes%29_Cell_The_Unit_of_Life_-_IV.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div><div class="lecture-entry" data-lid="l711213949805" data-gidx="94"><div class="lecture-meta"><button class="watch-btn" data-lid="l711213949805" onclick="toggleWatched('l711213949805')" aria-label="Mark as watched" aria-pressed="false" title="Mark watched">&#9675;</button><p class="lecture-title" data-title="[Cell">[Cell</p><button class="copy-btn" data-lid="l711213949805" onclick="copyLectureLink('l711213949805')" aria-label="Copy link" title="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button></div><div class="lecture-links"><a href="#" class="list-item video-item yt-item" role="button" tabindex="0" data-yt="ZO_ZqMv7pTI" data-lid="l711213949805" data-title="[Cell" data-gidx="94" aria-label="Watch on YouTube: [Cell" onclick="playVideo(event,this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(event,this);}">&#9654;&nbsp;YouTube</a><a href="The Unit of Life] (Cell : The Unit of Life) (NOTES) Cell The Unit of Life - V:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/60495641785243071_%28Notes%29_Cell_The_Unit_of_Life_-_V.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a><a href="The Unit of Life] (Cell : The Unit of Life) (Notes) Cell The Unit of Life - VI:https://d2xbehrddw0ngu.cloudfront.net/1033/admin_v1/pdf_images/64484331786036718_%28Notes%29_Cell_The_Unit_of_Life_-_VI.pdf" target="_blank" rel="noopener noreferrer" class="list-item pdf-item" aria-label="Open PDF for [Cell"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a></div></div></div></div></div>
+</main>
+<footer class="footer-wrap">
+  <a class="footer-credit-btn" href="https://t.me/jaat_mk"
+     target="_blank" rel="noopener noreferrer" aria-label="Telegram: जाटⁱˢß𝐚𝐜𝐤ツ">
+    <i class="fa-brands fa-telegram" aria-hidden="true" style="color:#29b5e8;font-size:18px"></i>
+    <span style="color:#ffffff;font-weight:800;font-size:14px">जाटⁱˢß𝐚𝐜𝐤ツ</span>
+  </a>
+  <p class="shortcut-hint">
+    <kbd>Space</kbd>=play/pause &nbsp;|&nbsp;
+    <kbd>F</kbd>=fullscreen &nbsp;|&nbsp;
+    <kbd>&larr;&rarr;</kbd>=&plusmn;10s &nbsp;|&nbsp;
+    <kbd>&uarr;&darr;</kbd>=volume &nbsp;|&nbsp;
+    <kbd>M</kbd>=mute &nbsp;|&nbsp;
+    <kbd>N</kbd>=next &nbsp;|&nbsp;
+    <kbd>P</kbd>=prev &nbsp;|&nbsp;
+    <kbd>D</kbd>=dark &nbsp;|&nbsp;
+    <kbd>/</kbd>=search
+  </p>
+</footer>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+<script>const FILE_KEY = "Perfect_360_Biology_Batch_for_NEET_UG_2027_All_1";
+
+/* ═══════════════════════════════════
+   STATE
+═══════════════════════════════════ */
+var player          = null;
+var hlsInstance     = null;
+var isPlayerReady   = false;
+var currentLid      = null;
+var currentPlayUrl  = null;
+var currentPlayTitle = '';
+var currentGIdx     = -1;
+var currentlyPlayingBtn = null;
+var autoMarked      = new Set();
+var watchedSet      = new Set();
+var lastSaveTime    = 0;
+var autoNextTimer   = null;
+var autoNextTarget  = null;
+var lastErrorUrl    = null;
+
+/* ═══════════════════════════════════
+   TOAST
+═══════════════════════════════════ */
+function showToast(msg, type, duration) {
+  type     = type     || 'info';
+  duration = duration || 2800;
+  var container = document.getElementById('toast-container');
+  var t = document.createElement('div');
+  t.className = 'toast toast-' + type;
+  var icon = type === 'success' ? '✓' : type === 'error' ? '✕' : type === 'warn' ? '⚠' : 'ℹ';
+  t.innerHTML = '<span style="font-size:15px">' + icon + '</span><span>' + msg + '</span>';
+  container.appendChild(t);
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { t.classList.add('show'); });
+  });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { if (t.parentNode) t.parentNode.removeChild(t); }, 300);
+  }, duration);
+}
+
+/* ═══════════════════════════════════
+   WATCHED TRACKING
+═══════════════════════════════════ */
+function loadWatched() {
+  try { watchedSet = new Set(JSON.parse(localStorage.getItem(FILE_KEY + '_w') || '[]')); } catch (e) {}
+  updateWatchedUI();
+}
+function toggleWatched(lid) {
+  var wasWatched = watchedSet.has(lid);
+  if (wasWatched) {
+    watchedSet.delete(lid);
+    showToast('Marked as unwatched', 'warn');
+  } else {
+    watchedSet.add(lid);
+    showToast('Marked as watched ✓', 'success');
+  }
+  _persistWatched();
+  updateWatchedUI();
+}
+function markWatched(lid) {
+  if (!lid || watchedSet.has(lid)) return;
+  watchedSet.add(lid);
+  _persistWatched();
+  updateWatchedUI();
+  showToast('Auto-marked as watched ✓', 'success');
+}
+function _persistWatched() {
+  try { localStorage.setItem(FILE_KEY + '_w', JSON.stringify([...watchedSet])); } catch (e) {}
+}
+
+function updateWatchedUI() {
+  var total = 0, watched = 0;
+  document.querySelectorAll('.lecture-entry[data-lid]').forEach(function (entry) {
+    var lid = entry.dataset.lid;
+    var w   = watchedSet.has(lid);
+    entry.classList.toggle('watched', w);
+    var wb = entry.querySelector('.watch-btn');
+    if (wb) {
+      wb.innerHTML = w ? '&#10003;' : '&#9675;';
+      wb.setAttribute('aria-pressed', w ? 'true' : 'false');
+    }
+    total++;
+    if (w) watched++;
+  });
+
+  document.querySelectorAll('.accordion-item').forEach(function (sub) {
+    var lecs = sub.querySelectorAll('.lecture-entry[data-lid]');
+    var wc   = [...lecs].filter(function (l) { return watchedSet.has(l.dataset.lid); }).length;
+    var sp   = sub.querySelector('.sub-progress');
+    if (sp) sp.textContent = lecs.length ? wc + '/' + lecs.length : '';
+
+    sub.querySelectorAll('.topic-accordion').forEach(function (t) {
+      var tl = t.querySelectorAll('.lecture-entry[data-lid]');
+      var tw = [...tl].filter(function (l) { return watchedSet.has(l.dataset.lid); }).length;
+      var tp = t.querySelector('.topic-progress');
+      if (tp) tp.textContent = tl.length ? tw + '/' + tl.length : '';
+    });
+  });
+
+  var pb   = document.getElementById('progress-badge');
+  var fill = document.getElementById('progress-fill');
+  if (total > 0) {
+    var pct = Math.round(watched / total * 100);
+    if (pb)   pb.textContent = 'Progress: ' + watched + '/' + total + ' (' + pct + '%)';
+    if (fill) fill.style.width = pct + '%';
+  }
+}
+
+/* ═══════════════════════════════════
+   CONTINUE WATCHING
+═══════════════════════════════════ */
+function saveLastPlayed(url, title, time) {
+  var now = Date.now();
+  if (now - lastSaveTime < 5000) return;
+  lastSaveTime = now;
+  try { localStorage.setItem(FILE_KEY + '_last', JSON.stringify({ url: url, title: title, time: Math.floor(time) })); } catch (e) {}
+}
+function checkResume() {
+  try {
+    var s = JSON.parse(localStorage.getItem(FILE_KEY + '_last') || 'null');
+    if (s && s.url && s.time > 5) {
+      var m   = Math.floor(s.time / 60);
+      var sec = String(s.time % 60).padStart(2, '0');
+      document.getElementById('resume-text').textContent =
+        'Continue: "' + (s.title || '') + '" at ' + m + ':' + sec;
+      document.getElementById('resume-banner').style.display = 'flex';
+      window._resumeUrl  = s.url;
+      window._resumeTime = s.time;
+    }
+  } catch (e) {}
+}
+function resumeVideo() {
+  document.getElementById('resume-banner').style.display = 'none';
+  if (!window._resumeUrl) return;
+  var ytId = _getYtId(window._resumeUrl);
+  if (ytId) {
+    _showYTPlayer(ytId);
+    setNowPlaying('Resuming…', -1);
+  } else {
+    _showDirectPlayer();
+    loadNewVideo(window._resumeUrl, window._resumeTime || 0);
+  }
+}
+function dismissResume() {
+  document.getElementById('resume-banner').style.display = 'none';
+  try { localStorage.removeItem(FILE_KEY + '_last'); } catch (e) {}
+}
+
+/* ═══════════════════════════════════
+   DARK MODE
+═══════════════════════════════════ */
+function toggleDark() {
+  var d   = document.documentElement.classList.toggle('dark');
+  var btn = document.getElementById('darkBtn');
+  if (btn) btn.textContent = d ? '\u2600\uFE0F' : '\uD83C\uDF19';
+  try { localStorage.setItem('bbk_dark', d ? '1' : '0'); } catch (e) {}
+}
+function initDarkMode() {
+  try {
+    if (localStorage.getItem('bbk_dark') === '1') {
+      document.documentElement.classList.add('dark');
+      var b = document.getElementById('darkBtn');
+      if (b) b.textContent = '\u2600\uFE0F';
+    }
+  } catch (e) {}
+}
+
+/* ═══════════════════════════════════
+   EXPAND / COLLAPSE ALL
+═══════════════════════════════════ */
+function expandAll() {
+  document.querySelectorAll('.accordion-header').forEach(function (b) {
+    b.classList.add('active');
+    b.setAttribute('aria-expanded', 'true');
+    var content = b.nextElementSibling;
+    content.classList.add('open');
+    content.style.maxHeight = content.scrollHeight + 'px';
+  });
+  document.querySelectorAll('.topic-header').forEach(function (b) {
+    b.classList.add('active');
+    b.setAttribute('aria-expanded', 'true');
+    var content = b.nextElementSibling;
+    content.style.maxHeight = content.scrollHeight + 'px';
+  });
+}
+function collapseAll() {
+  document.querySelectorAll('.accordion-header.active').forEach(function (b) {
+    b.classList.remove('active');
+    b.setAttribute('aria-expanded', 'false');
+    var content = b.nextElementSibling;
+    content.classList.remove('open');
+    content.style.maxHeight = null;
+  });
+  document.querySelectorAll('.topic-header.active').forEach(function (b) {
+    b.classList.remove('active');
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.style.maxHeight = null;
+  });
+}
+
+/* ═══════════════════════════════════
+   SEARCH  (debounced 200 ms)
+═══════════════════════════════════ */
+var _searchTimer = null;
+function filterContent(rawTerm) {
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(function () { _doFilter(rawTerm); }, 200);
+  var clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.classList.toggle('visible', rawTerm.trim().length > 0);
+}
+function clearSearch() {
+  var input = document.getElementById('searchInput');
+  if (input) { input.value = ''; input.focus(); }
+  filterContent('');
+}
+
+function _doFilter(rawTerm) {
+  var term    = rawTerm.trim().toLowerCase();
+  var esc_re  = term ? new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi') : null;
+  var visible = 0;
+
+  document.querySelectorAll('.accordion-item').forEach(function (subEl) {
+    var subHasVisible = false;
+
+    subEl.querySelectorAll('.topic-accordion').forEach(function (topicEl) {
+      var topicHasVisible = false;
+      topicEl.querySelectorAll('.lecture-entry').forEach(function (lec) {
+        var titleEl = lec.querySelector('.lecture-title');
+        var orig    = titleEl.dataset.title || titleEl.textContent;
+        var match   = !term || orig.toLowerCase().indexOf(term) !== -1;
+        lec.style.display = match ? '' : 'none';
+        if (match) {
+          topicHasVisible = true;
+          subHasVisible   = true;
+          visible++;
+          titleEl.innerHTML = term ? orig.replace(esc_re, '<mark>$1</mark>') : orig;
+        }
+      });
+      topicEl.style.display = topicHasVisible ? '' : 'none';
+      if (term && topicHasVisible) {
+        var th = topicEl.querySelector('.topic-header');
+        th.classList.add('active');
+        th.setAttribute('aria-expanded', 'true');
+        topicEl.querySelector('.topic-content').style.maxHeight = '99999px';
+      }
+    });
+
+    subEl.querySelectorAll('.accordion-content > .lecture-entry').forEach(function (lec) {
+      var titleEl = lec.querySelector('.lecture-title');
+      var orig    = titleEl.dataset.title || titleEl.textContent;
+      var match   = !term || orig.toLowerCase().indexOf(term) !== -1;
+      lec.style.display = match ? '' : 'none';
+      if (match) {
+        subHasVisible = true;
+        visible++;
+        titleEl.innerHTML = term ? orig.replace(esc_re, '<mark>$1</mark>') : orig;
+      }
+    });
+
+    subEl.style.display = subHasVisible ? '' : 'none';
+    if (term && subHasVisible) {
+      var ah = subEl.querySelector('.accordion-header');
+      ah.classList.add('active');
+      ah.setAttribute('aria-expanded', 'true');
+      var ac = subEl.querySelector('.accordion-content');
+      ac.classList.add('open');
+      ac.style.maxHeight = '99999px';
+    }
+  });
+
+  var cb = document.getElementById('search-result-count');
+  if (cb) {
+    cb.textContent = term ? visible + ' results' : '';
+    cb.style.display = term ? '' : 'none';
+  }
+}
+
+/* ═══════════════════════════════════
+   NOW PLAYING + NAV
+═══════════════════════════════════ */
+function setNowPlaying(title, gidx) {
+  var np  = document.getElementById('now-playing');
+  var npt = document.getElementById('now-playing-title');
+  if (!np || !npt) return;
+  if (title) {
+    npt.textContent = title;
+    np.style.display = 'flex';
+    _updateNavBtns(gidx);
+  } else {
+    np.style.display = 'none';
+  }
+}
+function _updateNavBtns(gidx) {
+  var prevBtn = document.getElementById('btn-prev');
+  var nextBtn = document.getElementById('btn-next');
+  var all     = document.querySelectorAll('.lecture-entry[data-gidx]');
+  var max     = all.length - 1;
+  if (prevBtn) prevBtn.disabled = gidx <= 0;
+  if (nextBtn) nextBtn.disabled = gidx >= max;
+}
+function playPrev() {
+  if (currentGIdx <= 0) return;
+  var entry = document.querySelector('.lecture-entry[data-gidx="' + (currentGIdx - 1) + '"]');
+  if (!entry) return;
+  var btn = entry.querySelector('.video-item');
+  if (btn) btn.click();
+}
+function playNext() {
+  var entry = document.querySelector('.lecture-entry[data-gidx="' + (currentGIdx + 1) + '"]');
+  if (!entry) return;
+  var btn = entry.querySelector('.video-item');
+  if (btn) btn.click();
+}
+
+/* ═══════════════════════════════════
+   AUTO-NEXT COUNTDOWN
+═══════════════════════════════════ */
+function _startAutoNext(nextEntry) {
+  var btn = nextEntry.querySelector('.video-item');
+  if (!btn) return;
+  autoNextTarget = btn;
+  var banner    = document.getElementById('autonext-banner');
+  var countEl   = document.getElementById('autonext-count');
+  var labelEl   = document.getElementById('autonext-label');
+  var nextTitle = btn.dataset.title || 'Next lecture';
+  if (labelEl) labelEl.textContent = 'Next: "' + nextTitle + '"';
+  banner.classList.add('show');
+
+  var count = 5;
+  if (countEl) countEl.textContent = count;
+  autoNextTimer = setInterval(function () {
+    count--;
+    if (countEl) countEl.textContent = count;
+    if (count <= 0) {
+      _cancelAutoNext();
+      if (autoNextTarget) autoNextTarget.click();
+    }
+  }, 1000);
+}
+function _cancelAutoNext() {
+  clearInterval(autoNextTimer);
+  autoNextTimer  = null;
+  autoNextTarget = null;
+  var banner = document.getElementById('autonext-banner');
+  if (banner) banner.classList.remove('show');
+}
+function cancelAutoNext() { _cancelAutoNext(); }
+function playAutoNext() {
+  var t = autoNextTarget;
+  _cancelAutoNext();
+  if (t) t.click();
+}
+
+/* ═══════════════════════════════════
+   COPY LINK
+═══════════════════════════════════ */
+function copyLectureLink(lid) {
+  var entry = document.querySelector('.lecture-entry[data-lid="' + lid + '"]');
+  if (!entry) return;
+  var btn = entry.querySelector('.video-item');
+  var url = btn ? btn.dataset.url : window.location.href;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(function () {
+      showToast('Link copied to clipboard!', 'success');
+    }).catch(function () {
+      _fallbackCopy(url);
+    });
+  } else {
+    _fallbackCopy(url);
+  }
+}
+function _fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity  = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    showToast('Link copied!', 'success');
+  } catch (e) {
+    showToast('Could not copy link', 'error');
+  }
+  document.body.removeChild(ta);
+}
+
+/* ═══════════════════════════════════
+   PLAYER — TEARDOWN
+═══════════════════════════════════ */
+function _destroyPlayer() {
+  _cancelAutoNext();
+  setLoading(false);
+  hideError();
+
+  if (hlsInstance) {
+    try { hlsInstance.destroy(); } catch (e) {}
+    hlsInstance = null;
+  }
+  if (player) {
+    try { player.destroy(); } catch (e) {}
+    player = null;
+  }
+  isPlayerReady = false;
+}
+
+/* ═══════════════════════════════════
+   PLAYER — UI HELPERS
+═══════════════════════════════════ */
+function setLoading(on) {
+  var el = document.getElementById('player-loading');
+  if (el) el.classList.toggle('visible', on);
+}
+function showError(msg) {
+  var el   = document.getElementById('player-error');
+  var pm   = document.getElementById('player-error-msg');
+  var link = document.getElementById('player-error-link');
+  if (el) el.classList.add('visible');
+  if (pm) pm.textContent = msg || 'An error occurred while loading the video.';
+  if (link) {
+    if (lastErrorUrl) { link.href = lastErrorUrl; link.style.display = 'inline-flex'; }
+    else { link.style.display = 'none'; }
+  }
+}
+function hideError() {
+  var el = document.getElementById('player-error');
+  if (el) el.classList.remove('visible');
+}
+function retryVideo() {
+  hideError();
+  if (lastErrorUrl) loadNewVideo(lastErrorUrl, 0);
+}
+
+/* ═══════════════════════════════════
+   YOUTUBE SUPPORT
+═══════════════════════════════════ */
+function _getYtId(url) {
+  if (!url) return null;
+  var m = url.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|live\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
+function _showYTPlayer(ytId) {
+  var pw    = document.getElementById('player-wrapper');
+  var ytW   = document.getElementById('yt-embed-wrapper');
+  var frame = document.getElementById('yt-frame');
+  var link  = document.getElementById('yt-open-link');
+  if (pw)    pw.style.display = 'none';
+  /* youtube-nocookie.com = fewer restrictions, no enablejsapi = no origin check */
+  if (frame) frame.src = 'https://www.youtube-nocookie.com/embed/' + ytId +
+    '?autoplay=1&rel=0&fs=1&color=white';
+  if (link)  link.href = 'https://www.youtube.com/watch?v=' + ytId;
+  if (ytW)   ytW.style.display = 'block';
+  setLoading(false);
+}
+function _showDirectPlayer() {
+  var pw    = document.getElementById('player-wrapper');
+  var ytW   = document.getElementById('yt-embed-wrapper');
+  var frame = document.getElementById('yt-frame');
+  if (ytW)   ytW.style.display = 'none';
+  if (frame) frame.src = '';   /* stop YouTube audio */
+  if (pw)    pw.style.display = 'block';
+}
+
+/* ═══════════════════════════════════
+   PLAYER — PLAY VIDEO
+═══════════════════════════════════ */
+function playVideo(event, element) {
+  if (event) event.preventDefault();
+  var ytId  = element.dataset.yt  || null;
+  var url   = element.dataset.url || null;
+  var lid   = element.dataset.lid   || null;
+  var title = element.dataset.title || '';
+  var gidx  = parseInt(element.dataset.gidx, 10);
+  if (!ytId && !url) return;
+
+  _destroyPlayer();
+  hideError();
+  lastErrorUrl = url;
+
+  if (currentlyPlayingBtn) currentlyPlayingBtn.classList.remove('playing');
+  element.classList.add('playing');
+  currentlyPlayingBtn = element;
+
+  document.querySelectorAll('.lecture-entry.now-active')
+    .forEach(function (e) { e.classList.remove('now-active'); });
+  var parentEntry = element.closest('.lecture-entry');
+  if (parentEntry) {
+    parentEntry.classList.add('now-active');
+    _openParentAccordions(parentEntry);
+    setTimeout(function () {
+      parentEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 400);
+  }
+
+  currentLid        = lid;
+  currentPlayTitle  = title;
+  currentGIdx       = gidx;
+  setNowPlaying(title, gidx);
+
+  if (ytId) {
+    currentPlayUrl = 'https://youtu.be/' + ytId;
+    _showYTPlayer(ytId);
+    showToast('▶ YouTube video loading…', 'info', 1800);
+  } else {
+    currentPlayUrl = url;
+    setLoading(true);
+    _showDirectPlayer();
+    setTimeout(function () { loadNewVideo(url, 0); }, 50);
+  }
+}
+
+function _openParentAccordions(entry) {
+  var topicContent = entry.closest('.topic-content');
+  if (topicContent) {
+    var th = topicContent.previousElementSibling;
+    if (th && !th.classList.contains('active')) {
+      th.classList.add('active');
+      th.setAttribute('aria-expanded', 'true');
+      topicContent.style.maxHeight = topicContent.scrollHeight + 'px';
+    }
+  }
+  var accContent = entry.closest('.accordion-content');
+  if (accContent) {
+    var ah = accContent.previousElementSibling;
+    if (ah && !ah.classList.contains('active')) {
+      ah.classList.add('active');
+      ah.setAttribute('aria-expanded', 'true');
+      accContent.classList.add('open');
+      accContent.style.maxHeight = accContent.scrollHeight + 'px';
+    }
+  }
+}
+
+/* ═══════════════════════════════════
+   PLAYER — ATTACH EVENTS
+═══════════════════════════════════ */
+function _attachEvents(startTime) {
+  player.on('ready', function () {
+    isPlayerReady = true;
+    setLoading(false);
+    if (startTime > 0) {
+      try { player.currentTime = startTime; } catch (e) {}
+    }
+    player.play().catch(function () {});
+  });
+
+  player.on('timeupdate', function () {
+    if (!isPlayerReady || !currentPlayUrl) return;
+    var dur = player.duration;
+    var cur = player.currentTime;
+    if (dur > 0 && cur > 3) {
+      saveLastPlayed(currentPlayUrl, currentPlayTitle, cur);
+      if (currentLid && (cur / dur) > 0.80 && !autoMarked.has(currentLid)) {
+        autoMarked.add(currentLid);
+        markWatched(currentLid);
+      }
+    }
+  });
+
+  player.on('ended', function () {
+    var nextEntry = document.querySelector(
+      '.lecture-entry[data-gidx="' + (currentGIdx + 1) + '"]'
+    );
+    if (nextEntry) _startAutoNext(nextEntry);
+  });
+
+  player.on('enterfullscreen', function () {
+    try {
+      if (screen.orientation && typeof screen.orientation.lock === 'function') {
+        screen.orientation.lock('landscape').catch(function () {});
+      }
+    } catch (e) {}
+  });
+  player.on('exitfullscreen', function () {
+    try {
+      if (screen.orientation && typeof screen.orientation.unlock === 'function') {
+        screen.orientation.unlock();
+      }
+    } catch (e) {}
+  });
+
+  player.on('error', function (event) {
+    setLoading(false);
+    showError('Video failed to load. Check your connection or try again.');
+    showToast('Video load failed', 'error');
+  });
+}
+
+/* ═══════════════════════════════════
+   PLAYER — LOAD VIDEO
+═══════════════════════════════════ */
+function loadNewVideo(url, startTime) {
+  startTime = startTime || 0;
+  var videoEl = document.getElementById('player');
+
+  /* FIX: mute & volume removed from controls array */
+  var plyrOpts = {
+    controls: [
+      'play-large', 'play', 'progress', 'current-time',
+      'settings', 'pip', 'fullscreen'
+    ],
+    settings:  ['speed', 'quality'],
+    speed:     { selected: 1, options: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5] },
+    fullscreen:{ enabled: true, fallback: true, iosNative: true },
+    clickToPlay: true,
+    keyboard:  { focused: true, global: false },
+    tooltips:  { controls: true, seek: true },
+  };
+
+  var isHLS = url.indexOf('.m3u8') !== -1;
+
+  if (isHLS && typeof Hls !== 'undefined' && Hls.isSupported()) {
+    hlsInstance = new Hls({
+      enableWorker:    true,
+      maxBufferLength: 30,
+      maxMaxBufferLength: 300,
+      maxBufferSize:   60 * 1000 * 1000,
+      maxBufferHole:   0.5,
+      startFragPrefetch: true,
+    });
+    hlsInstance.loadSource(url);
+    hlsInstance.attachMedia(videoEl);
+
+    hlsInstance.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+      var levels   = hlsInstance.levels.map(function (l) { return l.height; });
+      var uniqLvls = [...new Set(levels)];
+      uniqLvls.unshift(0);
+
+      plyrOpts.quality = {
+        default:  0,
+        options:  uniqLvls,
+        forced:   true,
+        onChange: updateQuality,
+      };
+      plyrOpts.i18n = { qualityLabel: { 0: 'Auto' } };
+
+      player = new Plyr(videoEl, plyrOpts);
+
+      hlsInstance.on(Hls.Events.LEVEL_SWITCHED, function (ev, d) {
+        var span = document.querySelector(
+          ".plyr__menu__container [data-plyr='quality'][value='0'] span"
+        );
+        if (span) {
+          span.innerHTML = hlsInstance.autoLevelEnabled
+            ? 'Auto (' + hlsInstance.levels[d.level].height + 'p)'
+            : 'Auto';
+        }
+      });
+
+      _attachEvents(startTime);
+    });
+
+    hlsInstance.on(Hls.Events.ERROR, function (event, data) {
+      if (data.fatal) {
+        setLoading(false);
+        switch (data.type) {
+          case Hls.ErrorTypes.NETWORK_ERROR:
+            showToast('Network error — retrying…', 'warn');
+            hlsInstance.startLoad();
+            break;
+          case Hls.ErrorTypes.MEDIA_ERROR:
+            showToast('Media error — recovering…', 'warn');
+            hlsInstance.recoverMediaError();
+            break;
+          default:
+            showError('HLS stream failed to load.');
+            showToast('Stream error', 'error');
+        }
+      }
+    });
+
+  } else if (isHLS && videoEl.canPlayType('application/vnd.apple.mpegurl')) {
+    videoEl.src = url;
+    player = new Plyr(videoEl, plyrOpts);
+    _attachEvents(startTime);
+
+  } else {
+    videoEl.src = url;
+    player = new Plyr(videoEl, plyrOpts);
+    _attachEvents(startTime);
+  }
+}
+
+function updateQuality(quality) {
+  if (!hlsInstance) return;
+  if (quality === 0) {
+    hlsInstance.currentLevel = -1;
+  } else {
+    for (var i = 0; i < hlsInstance.levels.length; i++) {
+      if (hlsInstance.levels[i].height === quality) {
+        hlsInstance.currentLevel = i;
+        break;
+      }
+    }
+  }
+}
+
+/* ═══════════════════════════════════
+   DOUBLE-TAP / DOUBLE-CLICK SEEK
+═══════════════════════════════════ */
+var _lastTapTime = 0;
+function _setupDoubleTapSeek() {
+  var wrapper = document.querySelector('.player-wrapper');
+  if (!wrapper) return;
+
+  wrapper.addEventListener('dblclick', function (e) {
+    if (e.target.closest('.plyr__controls')) return;
+    e.preventDefault();
+    if (!player || !isPlayerReady) return;
+    var rect = wrapper.getBoundingClientRect();
+    var x    = e.clientX - rect.left;
+    x < rect.width / 2 ? player.rewind(10) : player.forward(10);
+    showToast(x < rect.width / 2 ? '⏪ -10s' : '⏩ +10s', 'info', 900);
+  });
+
+  wrapper.addEventListener('touchend', function (e) {
+    if (e.target.closest('.plyr__controls')) return;
+    var now  = Date.now();
+    var diff = now - _lastTapTime;
+    if (diff > 0 && diff < 300 && _lastTapTime > 0) {
+      e.preventDefault();
+      if (player && isPlayerReady) {
+        var rect = wrapper.getBoundingClientRect();
+        var x    = e.changedTouches[0].clientX - rect.left;
+        x < rect.width / 2 ? player.rewind(10) : player.forward(10);
+        showToast(x < rect.width / 2 ? '⏪ -10s' : '⏩ +10s', 'info', 900);
+      }
+      _lastTapTime = 0;
+    } else {
+      _lastTapTime = now;
+      setTimeout(function () { _lastTapTime = 0; }, 310);
+    }
+  }, { passive: false });
+}
+
+/* ═══════════════════════════════════
+   KEYBOARD SHORTCUTS
+═══════════════════════════════════ */
+function _initKeyboard() {
+  document.addEventListener('keydown', function (e) {
+    var tag = document.activeElement.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
+
+    switch (e.code) {
+      case 'Space':
+        if (player && isPlayerReady) { e.preventDefault(); player.togglePlay(); }
+        break;
+      case 'KeyF':
+        if (player && isPlayerReady) player.fullscreen.toggle();
+        break;
+      case 'ArrowLeft':
+        if (player && isPlayerReady) { e.preventDefault(); player.rewind(10); showToast('⏪ -10s','info',900); }
+        break;
+      case 'ArrowRight':
+        if (player && isPlayerReady) { e.preventDefault(); player.forward(10); showToast('⏩ +10s','info',900); }
+        break;
+      case 'ArrowUp':
+        if (player && isPlayerReady) { e.preventDefault(); player.increaseVolume(0.1); }
+        break;
+      case 'ArrowDown':
+        if (player && isPlayerReady) { e.preventDefault(); player.decreaseVolume(0.1); }
+        break;
+      case 'KeyM':
+        if (player && isPlayerReady) { player.muted = !player.muted; showToast(player.muted ? '🔇 Muted' : '🔊 Unmuted','info',900); }
+        break;
+      case 'KeyD':
+        toggleDark();
+        break;
+      case 'KeyN':
+        playNext();
+        break;
+      case 'KeyP':
+        playPrev();
+        break;
+      case 'KeyE':
+        expandAll();
+        break;
+      case 'KeyC':
+        collapseAll();
+        break;
+      case 'Slash':
+        e.preventDefault();
+        var si = document.getElementById('searchInput');
+        if (si) si.focus();
+        break;
+    }
+  });
+}
+
+/* ═══════════════════════════════════
+   ACCORDIONS
+═══════════════════════════════════ */
+function _initAccordions() {
+  document.querySelectorAll('.accordion-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var isActive = btn.classList.contains('active');
+      document.querySelectorAll('.accordion-header').forEach(function (b) {
+        if (b !== btn) {
+          b.classList.remove('active');
+          b.setAttribute('aria-expanded', 'false');
+          var c = b.nextElementSibling;
+          c.classList.remove('open');
+          c.style.maxHeight = null;
+        }
+      });
+      if (!isActive) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        var content = btn.nextElementSibling;
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.addEventListener('transitionend', function fix() {
+          content.removeEventListener('transitionend', fix);
+          if (btn.classList.contains('active')) {
+            content.style.maxHeight = 'none';
+          }
+        }, { once: true });
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+        var content2 = btn.nextElementSibling;
+        content2.style.maxHeight = content2.scrollHeight + 'px';
+        requestAnimationFrame(function () {
+          content2.style.maxHeight = null;
+          content2.classList.remove('open');
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll('.topic-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var isActive = btn.classList.contains('active');
+      var pc       = btn.closest('.accordion-content');
+
+      if (pc) {
+        pc.querySelectorAll('.topic-header').forEach(function (b) {
+          if (b !== btn) {
+            b.classList.remove('active');
+            b.setAttribute('aria-expanded', 'false');
+            b.nextElementSibling.style.maxHeight = null;
+          }
+        });
+      }
+
+      if (!isActive) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        var tc = btn.nextElementSibling;
+        tc.style.maxHeight = tc.scrollHeight + 'px';
+
+        if (pc) {
+          var subHeader = pc.previousElementSibling;
+          if (subHeader && !subHeader.classList.contains('active')) {
+            subHeader.classList.add('active');
+            subHeader.setAttribute('aria-expanded', 'true');
+            pc.classList.add('open');
+            pc.style.maxHeight = 'none';
+          }
+        }
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.nextElementSibling.style.maxHeight = null;
+      }
+    });
+  });
+}
+
+/* ═══════════════════════════════════
+   INIT
+═══════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function () {
+  initDarkMode();
+  loadWatched();
+  checkResume();
+  _initAccordions();
+  _initKeyboard();
+  _setupDoubleTapSeek();
+});
+
+
+(function () {
+  'use strict';
+  var tb  = document.getElementById('kk-drawer-toggle');
+  var nav = document.getElementById('kk-drawer-nav');
+  var ov  = document.getElementById('kk-drawer-overlay');
+  if (!tb || !nav || !ov) return;
+
+  function openD() {
+    nav.classList.add('open');
+    ov.classList.add('open');
+    tb.classList.add('active');
+    tb.setAttribute('aria-expanded', 'true');
+    ov.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var firstLink = nav.querySelector('a');
+    if (firstLink) setTimeout(function () { firstLink.focus(); }, 100);
+  }
+  function closeD() {
+    nav.classList.remove('open');
+    ov.classList.remove('open');
+    tb.classList.remove('active');
+    tb.setAttribute('aria-expanded', 'false');
+    ov.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    tb.focus();
+  }
+
+  tb.addEventListener('click', function () {
+    nav.classList.contains('open') ? closeD() : openD();
+  });
+  ov.addEventListener('click', closeD);
+
+  nav.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab') {
+      var focusable = nav.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+    if (e.key === 'Escape') closeD();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) closeD();
+  });
+})();
+</script>
+</body>
+</html>
